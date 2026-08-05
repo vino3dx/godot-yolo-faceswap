@@ -1,0 +1,384 @@
+[gd_scene format=3 uid="uid://d33nrn25657ek"]
+
+[ext_resource type="Script" uid="uid://b128pg6mvdaah" path="res://scenes/levels/level_3.gd" id="1_1nwmf"]
+[ext_resource type="Texture2D" uid="uid://bkkrop0ua3bq1" path="res://assets/ui/level3/背景.png" id="1_44gv1"]
+[ext_resource type="PackedScene" uid="uid://b27erp15evhd2" path="res://scenes/common/bar_level_info.tscn" id="1_o8c3j"]
+[ext_resource type="Texture2D" uid="uid://dab5idojfsyw3" path="res://assets/ui/level3/问题框.png" id="3_ugcn1"]
+[ext_resource type="Texture2D" uid="uid://cyk7gknek11j3" path="res://assets/ui/level3/音乐.png" id="4_pimnq"]
+[ext_resource type="Texture2D" uid="uid://d274wexaecgu2" path="res://assets/ui/level3/试听哭嫁歌片段，点击正确选项.png" id="5_2bnyt"]
+[ext_resource type="Texture2D" uid="uid://mosgl3fsji5o" path="res://assets/ui/level3/声音框.png" id="6_n6eey"]
+[ext_resource type="Texture2D" uid="uid://int1hud0jgrt" path="res://assets/ui/level3/喇叭.png" id="7_qi5uv"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="8_apo5x"]
+[ext_resource type="Texture2D" uid="uid://bhofoq5w8qndi" path="res://assets/ui/level3/点击喇叭试听片段.png" id="8_f6egh"]
+[ext_resource type="Texture2D" uid="uid://d02vqqjjs1s32" path="res://assets/ui/level3/选项框.png" id="9_t4txi"]
+[ext_resource type="Texture2D" uid="uid://dvv0gpwfekcg6" path="res://assets/ui/level3/文字框.png" id="10_qi5uv"]
+[ext_resource type="PackedScene" uid="uid://clvquditrjkyd" path="res://scenes/common/btn_confirm.tscn" id="12_f6egh"]
+[ext_resource type="PackedScene" uid="uid://bfipx6ublab0a" path="res://scenes/common/btn_to_home.tscn" id="13_t4txi"]
+[ext_resource type="Texture2D" uid="uid://dtwwq04pg8ix3" path="res://assets/ui/level3/btn_爹爹_normal.png" id="14_kdsi4"]
+[ext_resource type="Texture2D" uid="uid://4oun1o48jtgr" path="res://assets/ui/level3/btn_爹爹_pressed.png" id="15_kva3v"]
+[ext_resource type="Texture2D" uid="uid://bego3wfehom3t" path="res://assets/ui/level3/刚才哭的是谁？.png" id="16_josfm"]
+[ext_resource type="Texture2D" uid="uid://csa4chrsn3md6" path="res://assets/ui/level3/btn_娘亲_normal.png" id="16_o3ttr"]
+[ext_resource type="Texture2D" uid="uid://b0ps1q4deei6w" path="res://assets/ui/level3/btn_娘亲_pressed.png" id="17_kdsi4"]
+[ext_resource type="Texture2D" uid="uid://c4xwnnbb3qcjo" path="res://assets/ui/level3/btn_哥哥_normal.png" id="18_do6pa"]
+[ext_resource type="Texture2D" uid="uid://bvqtsrcymvj5x" path="res://assets/ui/level3/btn_哥哥_pressed.png" id="19_n8qcm"]
+[ext_resource type="Texture2D" uid="uid://vhq7vlpdyawm" path="res://assets/ui/level3/btn_嫂嫂_normal.png" id="20_aey3y"]
+[ext_resource type="Script" uid="uid://b0mk24k47umbk" path="res://scripts/level_anim.gd" id="21_5f5xw"]
+[ext_resource type="Texture2D" uid="uid://dlfveaimy5cpj" path="res://assets/ui/level3/btn_嫂嫂_pressed.png" id="21_k0dme"]
+[ext_resource type="PackedScene" uid="uid://cdep5u13wvq3k" path="res://scenes/class/audio_visualizer.tscn" id="22_o3ttr"]
+[ext_resource type="Texture2D" uid="uid://3fm7ogcpb52b" path="res://assets/ui/button/btn_播放.png" id="26_n8qcm"]
+[ext_resource type="Texture2D" uid="uid://scidt3ucwhlv" path="res://assets/ui/button/btn_暂停.png" id="27_aey3y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jql0x"]
+texture = ExtResource("14_kdsi4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdsi4"]
+texture = ExtResource("15_kva3v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kva3v"]
+texture = ExtResource("16_o3ttr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_do6pa"]
+texture = ExtResource("17_kdsi4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8qcm"]
+texture = ExtResource("16_o3ttr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5em7"]
+texture = ExtResource("18_do6pa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22mqa"]
+texture = ExtResource("19_n8qcm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6c6bd"]
+texture = ExtResource("18_do6pa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2qmps"]
+texture = ExtResource("20_aey3y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtyp3"]
+texture = ExtResource("21_k0dme")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7m6w"]
+texture = ExtResource("20_aey3y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aey3y"]
+texture = ExtResource("26_n8qcm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k0dme"]
+texture = ExtResource("27_aey3y")
+
+[node name="Level3" type="Control" unique_id=2026598577]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1nwmf")
+metadata/_edit_horizontal_guides_ = [741.0, 1686.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=347185188]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_44gv1")
+
+[node name="BarLevelInfo" parent="." unique_id=1210337805 instance=ExtResource("1_o8c3j")]
+layout_mode = 0
+
+[node name="Label" parent="BarLevelInfo/Icon1" parent_id_path=PackedInt32Array(1210337805, 1283650277) index="0" unique_id=1833311624]
+offset_left = -130.0
+offset_right = 118.0
+text = "哭 嫁"
+
+[node name="Label2" parent="BarLevelInfo/Icon2" parent_id_path=PackedInt32Array(1210337805, 1839861947) index="0" unique_id=1771531278]
+text = "了解哭嫁歌的内容与含义"
+
+[node name="问题框" type="TextureRect" parent="." unique_id=348272837]
+layout_mode = 0
+offset_left = 2441.0
+offset_top = 344.0
+offset_right = 3535.0
+offset_bottom = 485.0
+texture = ExtResource("3_ugcn1")
+
+[node name="试听哭嫁歌片段，点击正确选项" type="TextureRect" parent="问题框" unique_id=1582946824]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -410.5
+offset_top = -25.5
+offset_right = 410.5
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_2bnyt")
+
+[node name="音乐" type="TextureRect" parent="问题框" unique_id=1246678358]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = -28.0
+offset_right = 86.0
+offset_bottom = 28.0
+grow_vertical = 2
+texture = ExtResource("4_pimnq")
+
+[node name="音乐2" type="TextureRect" parent="问题框" unique_id=160034731]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -27.5
+offset_right = -51.0
+offset_bottom = 28.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("4_pimnq")
+
+[node name="声音框" type="TextureRect" parent="." unique_id=1781056888]
+layout_mode = 0
+offset_left = 2255.0
+offset_top = 516.0
+offset_right = 3721.0
+offset_bottom = 962.0
+texture = ExtResource("6_n6eey")
+
+[node name="点击喇叭试听片段" type="TextureRect" parent="." unique_id=1214447459]
+layout_mode = 0
+offset_left = 2298.0
+offset_top = 850.0
+offset_right = 2599.0
+offset_bottom = 879.0
+texture = ExtResource("8_f6egh")
+
+[node name="选项框" type="TextureRect" parent="." unique_id=1778027983]
+layout_mode = 0
+offset_left = 2255.0
+offset_top = 1018.0
+offset_right = 3759.0
+offset_bottom = 1853.0
+texture = ExtResource("9_t4txi")
+
+[node name="刚才哭的是谁？" type="TextureRect" parent="." unique_id=274952781]
+layout_mode = 0
+offset_left = 2706.0
+offset_top = 1115.0
+offset_right = 3349.0
+offset_bottom = 1191.0
+texture = ExtResource("16_josfm")
+
+[node name="BtnPerson1" type="Button" parent="." unique_id=2116173416]
+layout_mode = 0
+offset_left = 2332.0
+offset_top = 1268.0
+offset_right = 2638.0
+offset_bottom = 1580.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_jql0x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kdsi4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jql0x")
+toggle_mode = true
+script = ExtResource("8_apo5x")
+hover_scale = 1.0
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="选择框" type="Button" parent="BtnPerson1" unique_id=1683427995]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 325.0
+offset_right = 296.0
+offset_bottom = 422.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.3882353, 0.14509805, 0.1254902, 1)
+theme_override_font_sizes/font_size = 52
+text = "爹爹"
+icon = ExtResource("10_qi5uv")
+flat = true
+icon_alignment = 1
+script = ExtResource("8_apo5x")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnPerson2" type="Button" parent="." unique_id=269821387]
+layout_mode = 0
+offset_left = 2677.0
+offset_top = 1268.0
+offset_right = 2983.0
+offset_bottom = 1580.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_kva3v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_do6pa")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n8qcm")
+toggle_mode = true
+script = ExtResource("8_apo5x")
+hover_scale = 1.0
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="选择框" type="Button" parent="BtnPerson2" unique_id=1705628516]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 325.0
+offset_right = 296.0
+offset_bottom = 422.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.3882353, 0.14509805, 0.1254902, 1)
+theme_override_font_sizes/font_size = 52
+text = "娘亲"
+icon = ExtResource("10_qi5uv")
+flat = true
+icon_alignment = 1
+script = ExtResource("8_apo5x")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnPerson3" type="Button" parent="." unique_id=1342147647]
+layout_mode = 0
+offset_left = 3029.0
+offset_top = 1268.09
+offset_right = 3335.0
+offset_bottom = 1580.09
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_o5em7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_22mqa")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6c6bd")
+toggle_mode = true
+script = ExtResource("8_apo5x")
+hover_scale = 1.0
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="选择框" type="Button" parent="BtnPerson3" unique_id=1648534588]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 325.0
+offset_right = 296.0
+offset_bottom = 422.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.3882353, 0.14509805, 0.1254902, 1)
+theme_override_font_sizes/font_size = 52
+text = "哥哥"
+icon = ExtResource("10_qi5uv")
+flat = true
+icon_alignment = 1
+script = ExtResource("8_apo5x")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnPerson4" type="Button" parent="." unique_id=1424876907]
+layout_mode = 0
+offset_left = 3382.0
+offset_top = 1268.0
+offset_right = 3688.0
+offset_bottom = 1580.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_2qmps")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gtyp3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n7m6w")
+toggle_mode = true
+script = ExtResource("8_apo5x")
+hover_scale = 1.0
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="选择框" type="Button" parent="BtnPerson4" unique_id=1690713742]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 325.0
+offset_right = 296.0
+offset_bottom = 422.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.3882353, 0.14509805, 0.1254902, 1)
+theme_override_font_sizes/font_size = 52
+text = "嫂嫂"
+icon = ExtResource("10_qi5uv")
+flat = true
+icon_alignment = 1
+script = ExtResource("8_apo5x")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="Btn_PlayAudio" type="Button" parent="." unique_id=898277027]
+layout_mode = 0
+offset_left = 2377.0
+offset_top = 669.0
+offset_right = 2525.0
+offset_bottom = 816.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("7_qi5uv")
+flat = true
+script = ExtResource("8_apo5x")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="Btn_BackToHome" parent="." unique_id=1317909387 instance=ExtResource("13_t4txi")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.0
+offset_top = -210.0
+offset_right = -200.0
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Btn_Confirm" parent="." unique_id=721568396 instance=ExtResource("12_f6egh")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -372.0
+offset_top = -259.0
+offset_right = 372.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CheckButton" type="Button" parent="." unique_id=419114958]
+layout_mode = 0
+offset_left = 3481.0
+offset_top = 657.0
+offset_right = 3653.0
+offset_bottom = 825.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxTexture_aey3y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k0dme")
+theme_override_styles/hover = SubResource("StyleBoxTexture_aey3y")
+toggle_mode = true
+button_pressed = true
+script = ExtResource("8_apo5x")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="UIAnimator" type="Node" parent="." unique_id=1149208876 node_paths=PackedStringArray("targets")]
+script = ExtResource("21_5f5xw")
+targets = [NodePath("../BarLevelInfo/Icon1"), NodePath("../BarLevelInfo/Icon2"), NodePath("../问题框"), NodePath("../声音框"), NodePath("../Btn_PlayAudio"), NodePath("../CheckButton"), NodePath("../点击喇叭试听片段"), NodePath("../选项框"), NodePath("../刚才哭的是谁？"), NodePath("../BtnPerson1"), NodePath("../BtnPerson2"), NodePath("../BtnPerson3"), NodePath("../BtnPerson4"), NodePath("../Btn_Confirm"), NodePath("../Btn_BackToHome")]
+start_offsets = Array[Vector2]([Vector2(-300, 0), Vector2(-250, 0), Vector2(0, -100), Vector2(0, -100), Vector2(50, 0), Vector2(-50, 0), Vector2(50, 0), Vector2(-50, 0), Vector2(0, 100), Vector2(-100, 0), Vector2(-100, 0), Vector2(-100, 0), Vector2(-100, 0), Vector2(0, 100), Vector2(100, 0), Vector2(100, 0)])
+start_scales = Array[Vector2]([Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0.8, 0.8), Vector2(0.8, 0.8)])
+stagger = 0.2
+metadata/_custom_type_script = "uid://b0mk24k47umbk"
+
+[node name="AudioVisualizer" parent="." unique_id=822268912 instance=ExtResource("22_o3ttr")]
+visible = false
+position = Vector2(2628, 741)
+bar_count = 58
+amplitude = 1200.0
+bar_color = Color(0.7411765, 0.54901963, 0.73333335, 1)
+center_y = 0.0
+
+[connection signal="pressed" from="Btn_PlayAudio" to="AudioVisualizer" method="_on_btn_play_audio_pressed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
+
+[editable path="BarLevelInfo"]

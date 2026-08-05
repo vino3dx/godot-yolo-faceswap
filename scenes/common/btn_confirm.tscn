@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://clvquditrjkyd"]
+
+[ext_resource type="Texture2D" uid="uid://dx14qbg67jdbv" path="res://assets/ui/common/确认框.png" id="1_k026h"]
+[ext_resource type="Texture2D" uid="uid://dut70j2stctu3" path="res://assets/ui/common/确认框暗.png" id="2_6kvkn"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="3_6kvkn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tifsc"]
+texture = ExtResource("1_k026h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kvkn"]
+texture = ExtResource("2_6kvkn")
+
+[node name="Btn_Confirm" type="Button" unique_id=1097266416]
+offset_right = 744.0
+offset_bottom = 197.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxTexture_tifsc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6kvkn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tifsc")
+script = ExtResource("3_6kvkn")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://s345ficu8cy0"]
+
+[ext_resource type="Script" uid="uid://ok3axqpxhqbh" path="res://test/TestFaceSwap/TestFaceSwap.cs" id="1_ym4hq"]
+[ext_resource type="Script" uid="uid://6nqka6lolvnn" path="res://test/TestFaceSwap/node.gd" id="2_12gdw"]
+
+[node name="TestFaceSwap" type="Control" unique_id=1979357048]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ym4hq")
+
+[node name="ResultDisplay" type="TextureRect" parent="." unique_id=1738461266]
+layout_mode = 1
+offset_right = 1012.0
+offset_bottom = 1704.0
+
+[node name="BtnSwap" type="Button" parent="." unique_id=1648018154]
+layout_mode = 0
+offset_left = 1465.0
+offset_top = 1405.0
+offset_right = 2325.0
+offset_bottom = 1704.0
+theme_override_font_sizes/font_size = 213
+text = "点击换装"
+
+[node name="Node" type="Node" parent="." unique_id=2091068174]
+script = ExtResource("2_12gdw")

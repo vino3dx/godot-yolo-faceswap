@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://l5f04yejp1sr"]
+
+[ext_resource type="Script" uid="uid://dmxqg6b4lvmft" path="res://scenes/face_swapping/level_5.gd" id="1_ie6h4"]
+[ext_resource type="Script" uid="uid://0t8v6bcl7q2j" path="res://scripts/camera_feed_view.gd" id="2_1k8mx"]
+[ext_resource type="Texture2D" uid="uid://b3i0tao0t0xfs" path="res://assets/ui/face_swapping/lv4_图层 1.png" id="2_ya5gn"]
+[ext_resource type="Texture2D" uid="uid://cjnbx1hmqme37" path="res://assets/ui/face_swapping/lv4_拍照框.png" id="3_2lwfw"]
+[ext_resource type="Texture2D" uid="uid://dnodb8j4c5k3y" path="res://assets/ui/face_swapping/lv4_框.png" id="4_l075o"]
+[ext_resource type="Texture2D" uid="uid://dhhovxw18837u" path="res://assets/ui/face_swapping/btn_返回.png" id="5_0n57a"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="6_ie6h4"]
+[ext_resource type="Texture2D" uid="uid://db5d632ppvctt" path="res://assets/ui/face_swapping/btn_换装.png" id="7_0n57a"]
+[ext_resource type="Texture2D" uid="uid://ie0600oc7jln" path="res://assets/ui/face_swapping/btn_重拍.png" id="7_1k8mx"]
+[ext_resource type="Texture2D" uid="uid://pkr7prnxfubx" path="res://assets/ui/face_swapping/人像框.png" id="10_1k8mx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yeh5k"]
+font_size = 190
+outline_size = 8
+outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1k8mx"]
+font_size = 145
+outline_size = 8
+outline_color = Color(1, 0, 0, 1)
+
+[node name="Level5" type="Control" unique_id=188303013]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ie6h4")
+metadata/_edit_vertical_guides_ = [1917.0]
+
+[node name="CameraFeedView" type="TextureRect" parent="." unique_id=1599426750]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_1k8mx")
+
+[node name="SnapshotView" type="TextureRect" parent="." unique_id=408939655]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Lv4图层1" type="TextureRect" parent="." unique_id=1314839442]
+layout_mode = 1
+offset_left = -1.0
+offset_right = 3839.0
+offset_bottom = 2160.0
+texture = ExtResource("2_ya5gn")
+
+[node name="Lv4拍照框" type="TextureRect" parent="." unique_id=2114470177]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1920.0
+offset_top = -908.0
+offset_right = 1920.0
+offset_bottom = 908.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2lwfw")
+
+[node name="Lv4框" type="TextureRect" parent="." unique_id=465697115]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1920.0
+offset_top = -783.0
+offset_right = 1920.0
+offset_bottom = 783.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_l075o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=285346539]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -265.0
+offset_top = -172.0
+offset_right = -54.0
+offset_bottom = 172.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 28
+
+[node name="BtnReshoot" type="Button" parent="VBoxContainer" unique_id=1057089344]
+layout_mode = 2
+icon = ExtResource("7_1k8mx")
+flat = true
+script = ExtResource("6_ie6h4")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnOutfit" type="Button" parent="VBoxContainer" unique_id=193288807]
+layout_mode = 2
+icon = ExtResource("7_0n57a")
+flat = true
+script = ExtResource("6_ie6h4")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnBack" type="Button" parent="VBoxContainer" unique_id=43109337]
+layout_mode = 2
+icon = ExtResource("5_0n57a")
+flat = true
+script = ExtResource("6_ie6h4")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="PortraitFrame" type="TextureRect" parent="." unique_id=1631339101]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.5
+offset_top = -616.0
+offset_right = 442.5
+offset_bottom = 393.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_1k8mx")
+
+[node name="Countdown" type="Label" parent="." unique_id=2039414011]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = 354.0
+offset_right = 54.5
+offset_bottom = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5"
+label_settings = SubResource("LabelSettings_yeh5k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=390084191]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = 572.0
+offset_right = 580.0
+offset_bottom = 772.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "倒计时结束后拍照"
+label_settings = SubResource("LabelSettings_1k8mx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1180941244]
+autostart = true

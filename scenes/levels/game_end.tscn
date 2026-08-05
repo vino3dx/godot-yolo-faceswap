@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c5ov82e2colyj"]
+
+[ext_resource type="Script" uid="uid://bepd85kummkv0" path="res://scenes/levels/game_end.gd" id="1_jg4lj"]
+[ext_resource type="Texture2D" uid="uid://c4jy71w35lk8r" path="res://assets/ui/common/游戏结束-荣誉证书.png" id="1_w34p8"]
+[ext_resource type="PackedScene" uid="uid://bfipx6ublab0a" path="res://scenes/common/btn_to_home.tscn" id="3_0ban8"]
+[ext_resource type="VideoStream" uid="uid://b1odaupyf66jf" path="res://assets/video/荣誉证书动画.mp4" id="3_i21a0"]
+[ext_resource type="Texture2D" uid="uid://dnbbxjl0xmcet" path="res://assets/ui/qr_code/http___shader.show_image_bazhognjianchayuan_HunJia.jpg.png" id="4_r7mff"]
+
+[node name="GameEnd" type="Control" unique_id=1688419817]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jg4lj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1179791146]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w34p8")
+
+[node name="Btn_BackToHome" parent="." unique_id=1013683695 instance=ExtResource("3_0ban8")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.0
+offset_top = -210.0
+offset_right = -200.0
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="QrCode" type="TextureRect" parent="." unique_id=679904134]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -512.0
+offset_right = 256.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_r7mff")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=748365976]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stream = ExtResource("3_i21a0")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

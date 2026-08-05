@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://ciqlrlbcj7m6x"]
+
+[ext_resource type="Script" uid="uid://dmyj8clsquk10" path="res://scenes/face_swapping/level_2.gd" id="1_4lxer"]
+[ext_resource type="Texture2D" uid="uid://dfxnjgnm0ioru" path="res://assets/ui/face_swapping/lv0_背景.png" id="2_g0bd7"]
+[ext_resource type="Texture2D" uid="uid://b7xhc306ulkc7" path="res://assets/ui/face_swapping/lv1_框.png" id="3_47kjp"]
+[ext_resource type="Texture2D" uid="uid://ygk8jk28g6yk" path="res://assets/ui/face_swapping/lv1_文字内容.png" id="4_a4e1p"]
+[ext_resource type="Texture2D" uid="uid://bkmurkx5oa7qy" path="res://assets/ui/face_swapping/lv1_哭嫁歌.png" id="5_u4xjt"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="6_3cw1f"]
+[ext_resource type="Texture2D" uid="uid://33jlwlym62wd" path="res://assets/ui/face_swapping/lv1_换脸体验.png" id="7_o2y1r"]
+[ext_resource type="Texture2D" uid="uid://dcua7f7xtdgcn" path="res://assets/ui/face_swapping/lv1_返回栏.png" id="8_t6l7p"]
+[ext_resource type="Script" uid="uid://bfh6sijkt8v1q" path="res://scenes/face_swapping/video_stream_player.gd" id="9_47kjp"]
+[ext_resource type="PackedScene" uid="uid://8uegiyvwox5g" path="res://scenes/视频播放器/video_tool_bar.tscn" id="9_g0bd7"]
+
+[node name="Level2" type="Control" unique_id=648895822]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4lxer")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1450640169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_g0bd7")
+expand_mode = 1
+
+[node name="Lv1框" type="TextureRect" parent="." unique_id=1618011770]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1920.0
+offset_top = -881.0
+offset_right = 1693.0
+offset_bottom = 923.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_47kjp")
+
+[node name="Lv1文字内容" type="TextureRect" parent="." unique_id=591450115]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1660.0
+offset_top = -369.0
+offset_right = 901.0
+offset_bottom = 473.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_a4e1p")
+
+[node name="BtnPlayVideo" type="Button" parent="." unique_id=144686198]
+layout_mode = 0
+offset_left = 1794.0
+offset_top = 1702.0
+offset_right = 2266.0
+offset_bottom = 1796.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("5_u4xjt")
+flat = true
+script = ExtResource("6_3cw1f")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnStart" type="Button" parent="." unique_id=1749554758]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -863.0
+offset_top = -205.0
+offset_right = -376.0
+offset_bottom = 282.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("7_o2y1r")
+flat = true
+script = ExtResource("6_3cw1f")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="Lv1返回栏" type="Button" parent="." unique_id=1084510937]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -365.0
+offset_right = 113.0
+offset_bottom = 475.0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0, 0.5)
+icon = ExtResource("8_t6l7p")
+flat = true
+script = ExtResource("6_3cw1f")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=29341603]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand = true
+script = ExtResource("9_47kjp")
+
+[node name="ColorRect" type="ColorRect" parent="VideoStreamPlayer" unique_id=793279697]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VideoToolBar" parent="VideoStreamPlayer" unique_id=1510533818 instance=ExtResource("9_g0bd7")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -962.0
+offset_top = -280.0
+offset_right = 962.0
+offset_bottom = -70.0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[connection signal="pressed" from="BtnPlayVideo" to="." method="_on_btn_play_video_pressed"]
+[connection signal="pressed" from="BtnStart" to="." method="_on_btn_next_pressed"]
+[connection signal="pressed" from="Lv1返回栏" to="." method="_on_btn_previous_pressed"]
+[connection signal="exit_pressed" from="VideoStreamPlayer/VideoToolBar" to="." method="_on_video_tool_bar_exit_pressed"]

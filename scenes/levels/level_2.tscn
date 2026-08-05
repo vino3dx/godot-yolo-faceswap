@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://ujn36708esu"]
+
+[ext_resource type="Texture2D" uid="uid://doqvy3ogrg6h4" path="res://assets/ui/level2/关卡2-背景.png" id="1_j2425"]
+[ext_resource type="Script" uid="uid://bgc5ng2ypk26e" path="res://scenes/levels/level_2.gd" id="1_r88tb"]
+[ext_resource type="PackedScene" uid="uid://b27erp15evhd2" path="res://scenes/common/bar_level_info.tscn" id="2_g2h2n"]
+[ext_resource type="Texture2D" uid="uid://bv65275xuhywq" path="res://assets/ui/level2/男方纸.png" id="3_fiq81"]
+[ext_resource type="Texture2D" uid="uid://dxjjpw8es7clb" path="res://assets/ui/level2/女方纸.png" id="4_l37oo"]
+[ext_resource type="Texture2D" uid="uid://jvpgmf2s4jjs" path="res://assets/ui/level2/男图标.png" id="5_qpwj6"]
+[ext_resource type="Texture2D" uid="uid://bkgh6461042vf" path="res://assets/ui/level2/男方生辰.png" id="6_ibugp"]
+[ext_resource type="Texture2D" uid="uid://d0emns078ps2g" path="res://assets/ui/level2/女图标.png" id="7_8qukl"]
+[ext_resource type="Texture2D" uid="uid://dqj7wknjw03ts" path="res://assets/ui/level2/女方生辰.png" id="8_3p04p"]
+[ext_resource type="Texture2D" uid="uid://bpqla1nfui8rq" path="res://assets/ui/level2/女生卡片.png" id="9_qsp8v"]
+[ext_resource type="FontFile" uid="uid://basb3rl3ng8mi" path="res://assets/fonts/SOURCEHANSERIF-BOLD.TTC" id="12_p4se4"]
+[ext_resource type="Script" uid="uid://b0mk24k47umbk" path="res://scripts/level_anim.gd" id="13_tv7cl"]
+[ext_resource type="PackedScene" uid="uid://clvquditrjkyd" path="res://scenes/common/btn_confirm.tscn" id="15_ndlae"]
+[ext_resource type="PackedScene" uid="uid://bfipx6ublab0a" path="res://scenes/common/btn_to_home.tscn" id="16_v8d84"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sbygb"]
+font = ExtResource("12_p4se4")
+font_size = 33
+font_color = Color(0.28235295, 0.14901961, 0.02745098, 1)
+
+[node name="Level2" type="Control" unique_id=61875391]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r88tb")
+
+[node name="Background" type="TextureRect" parent="." unique_id=331756260]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j2425")
+expand_mode = 1
+
+[node name="BarLevelInfo" parent="." unique_id=1210337805 instance=ExtResource("2_g2h2n")]
+layout_mode = 1
+
+[node name="Label" parent="BarLevelInfo/Icon1" parent_id_path=PackedInt32Array(1210337805, 1283650277) index="0" unique_id=1833311624]
+offset_left = -158.0
+offset_right = 146.0
+text = "合八字"
+
+[node name="Label2" parent="BarLevelInfo/Icon2" parent_id_path=PackedInt32Array(1210337805, 1839861947) index="0" unique_id=1771531278]
+text = "将正确的生辰八字配对"
+
+[node name="Content" type="Control" parent="." unique_id=1437390250]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MalePaper" type="TextureRect" parent="Content" unique_id=892777989]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 534.0
+offset_right = 1744.0
+offset_bottom = 1625.0
+pivot_offset_ratio = Vector2(1, 0)
+texture = ExtResource("3_fiq81")
+
+[node name="男图标" type="TextureRect" parent="Content" unique_id=33376869]
+layout_mode = 0
+offset_left = 1208.0
+offset_top = 644.0
+offset_right = 1255.0
+offset_bottom = 735.0
+texture = ExtResource("5_qpwj6")
+
+[node name="男方生辰" type="TextureRect" parent="Content" unique_id=1435857129]
+layout_mode = 0
+offset_left = 1283.0
+offset_top = 666.0
+offset_right = 1546.0
+offset_bottom = 719.0
+texture = ExtResource("6_ibugp")
+
+[node name="女方纸" type="TextureRect" parent="Content" unique_id=371260019]
+layout_mode = 0
+offset_left = 2092.0
+offset_top = 532.0
+offset_right = 2878.0
+offset_bottom = 1626.0
+texture = ExtResource("4_l37oo")
+
+[node name="女图标" type="TextureRect" parent="Content" unique_id=1502407558]
+layout_mode = 0
+offset_left = 2299.0
+offset_top = 641.0
+offset_right = 2346.0
+offset_bottom = 732.0
+texture = ExtResource("7_8qukl")
+
+[node name="女方生辰" type="TextureRect" parent="Content" unique_id=1680489632]
+layout_mode = 0
+offset_left = 2376.0
+offset_top = 661.0
+offset_right = 2639.0
+offset_bottom = 714.0
+texture = ExtResource("8_3p04p")
+
+[node name="女生卡片" type="TextureRect" parent="Content" unique_id=81930992]
+visible = false
+layout_mode = 0
+offset_left = 2526.73
+offset_top = 930.0
+offset_right = 2890.73
+offset_bottom = 1231.0
+texture = ExtResource("9_qsp8v")
+
+[node name="Label" type="Label" parent="Content/女生卡片" unique_id=717960110]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.07504
+offset_top = -109.499985
+offset_right = 152.99832
+offset_bottom = 91.500015
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.02617994
+text = "丁丑年
+三月初八
+巳时牛 涧下水
+丑土"
+label_settings = SubResource("LabelSettings_sbygb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Btn_Confirm" parent="." unique_id=721568396 instance=ExtResource("15_ndlae")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -372.0
+offset_top = -259.0
+offset_right = 372.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Btn_BackToHome" parent="." unique_id=1317909387 instance=ExtResource("16_v8d84")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.0
+offset_top = -210.0
+offset_right = -200.0
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="UIAnimator" type="Node" parent="." unique_id=1571626718 node_paths=PackedStringArray("targets")]
+script = ExtResource("13_tv7cl")
+targets = [NodePath("../BarLevelInfo/Icon1"), NodePath("../BarLevelInfo/Icon2"), NodePath("../Content/MalePaper"), NodePath("../Content/女方纸"), NodePath("../Content/男方生辰"), NodePath("../Content/男图标"), NodePath("../Content/女方生辰"), NodePath("../Content/女图标"), NodePath("../Content/女生卡片"), NodePath("../Btn_Confirm"), NodePath("../Btn_BackToHome")]
+start_offsets = Array[Vector2]([Vector2(-300, 0), Vector2(-250, 0), Vector2(0, -100), Vector2(0, -100), Vector2(50, 0), Vector2(-50, 0), Vector2(50, 0), Vector2(-50, 0), Vector2(0, 100), Vector2(-100, 0), Vector2(-100, 0), Vector2(-100, 0), Vector2(-100, 0), Vector2(0, 100), Vector2(100, 0)])
+start_scales = Array[Vector2]([Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0.8, 0.8), Vector2(0.8, 0.8)])
+stagger = 0.2
+metadata/_custom_type_script = "uid://b0mk24k47umbk"
+
+[node name="MaleWheelContainer" type="Control" parent="." unique_id=171439665]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 1039.0
+offset_top = 862.0
+offset_right = 1039.0
+offset_bottom = 862.0
+scale = Vector2(1.265, 1.265)
+
+[node name="FemaleWheelContainer" type="Control" parent="." unique_id=1413766838]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 2146.0
+offset_top = 862.00006
+offset_right = 2146.0
+offset_bottom = 862.00006
+scale = Vector2(1.265, 1.265)
+
+[editable path="BarLevelInfo"]

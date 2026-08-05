@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://b6pva7rnmwoqo"]
+
+[ext_resource type="Texture2D" uid="uid://cmco3brodhodq" path="res://assets/ui/common/顶部流程-未开始.png" id="1_y0acb"]
+[ext_resource type="Texture2D" uid="uid://b0tkjum52g7" path="res://assets/ui/common/连接线.png" id="2_j4d2a"]
+[ext_resource type="PackedScene" uid="uid://bnjt80smvwnhy" path="res://scenes/common/pop_tips.tscn" id="3_b6bv0"]
+[ext_resource type="Texture2D" uid="uid://c2vywaph7rpbf" path="res://assets/ui/common/顶部流程-已完成.png" id="3_u81e1"]
+[ext_resource type="PackedScene" uid="uid://d27831p4iul8j" path="res://scenes/common/pop_win.tscn" id="4_ubwgw"]
+[ext_resource type="Script" uid="uid://ntvwddx4dds4" path="res://scripts/popup_manager.gd" id="5_b6bv0"]
+[ext_resource type="Script" uid="uid://dnx50dnqy58dt" path="res://scripts/level_manager.gd" id="5_u81e1"]
+[ext_resource type="PackedScene" uid="uid://cm8uk7cxqgtje" path="res://scenes/class/transition_video.tscn" id="8_vkq25"]
+
+[node name="Main" type="Node" unique_id=1865357154]
+
+[node name="LevelManager" type="Node" parent="." unique_id=180757383]
+script = ExtResource("5_u81e1")
+
+[node name="PopupManager" type="Node" parent="." unique_id=1158112750]
+script = ExtResource("5_b6bv0")
+tips_scene = ExtResource("3_b6bv0")
+win_scene = ExtResource("4_ubwgw")
+
+[node name="LevelContainer" type="Node" parent="." unique_id=1015359326]
+editor_description = "纯容器， level_1 等场景就实例化在这里面"
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=338172550]
+
+[node name="HUD" type="Control" parent="UILayer" unique_id=1743989967]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="TextureProgressBar" parent="UILayer/HUD" unique_id=1264668096]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -948.5
+offset_right = 948.5
+offset_bottom = 271.5369
+grow_horizontal = 2
+max_value = 98.0
+step = 14.0
+value = 98.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_y0acb")
+texture_over = ExtResource("2_j4d2a")
+texture_progress = ExtResource("3_u81e1")
+
+[node name="Popups" type="Control" parent="UILayer" unique_id=868560319]
+editor_description = "弹窗出现的"
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BlockingLayer" type="Control" parent="UILayer" unique_id=132108525]
+editor_description = "屏蔽所有点击输入"
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TransitionVideo" parent="UILayer" unique_id=1009995173 instance=ExtResource("8_vkq25")]
+editor_description = "过场动画播放器"
+
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=1210421490]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="TransitionLayer" unique_id=799671918]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15686275, 0.15686275, 0.15686275, 0.30588236)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TransitionLayer" unique_id=1536690633]

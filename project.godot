@@ -1,0 +1,67 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="HunJiaXiSu"
+config/description="大巴山婚嫁习俗的程序"
+config/tags=PackedStringArray("大巴山")
+run/main_scene="uid://b6pva7rnmwoqo"
+config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
+boot_splash/show_image=false
+config/icon="uid://s3iwlrhswiqp"
+
+[audio]
+
+buses/default_bus_layout="uid://cs0o4jh3oc25q"
+
+[autoload]
+
+AudioManager="*uid://bcu8xt3k3cr4w"
+GameState="*uid://b65nn1mcg7vxh"
+FaceSwapManager="*uid://bf0hpmp8wbcur"
+FtpUploader="*uid://bq1en3f1omsi0"
+LicenseManager="*uid://dy4jnbqs1mu1q"
+
+[display]
+
+window/size/viewport_width=3840
+window/size/viewport_height=2160
+window/size/borderless=true
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="HunJiaXiSu"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/license_manager/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Models/": "orange",
+"res://assets/ui/face_swapping/": "teal",
+"res://scenes/face_swapping/": "purple",
+"res://scripts/FaceSwap/": "pink"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://8uegiyvwox5g"]
+
+[ext_resource type="Script" uid="uid://cirv1qgj54nfu" path="res://scenes/视频播放器/video_tool_bar.gd" id="1_6vbhf"]
+[ext_resource type="Texture2D" uid="uid://ohj64v1okdme" path="res://scenes/视频播放器/icon/播放_btn.png" id="2_ue7f5"]
+[ext_resource type="Texture2D" uid="uid://cxagabamb4dcm" path="res://scenes/视频播放器/icon/暂停_btn.png" id="3_2o7x4"]
+[ext_resource type="Texture2D" uid="uid://ddbnoa142bcoe" path="res://scenes/视频播放器/icon/停止_btn.png" id="4_a7cv6"]
+[ext_resource type="Texture2D" uid="uid://da4xkhou151ag" path="res://scenes/视频播放器/icon/后退_btn.png" id="5_7a4r7"]
+[ext_resource type="Texture2D" uid="uid://b4sxuw542stua" path="res://scenes/视频播放器/icon/前进_btn.png" id="6_jhei2"]
+[ext_resource type="Texture2D" uid="uid://ob07x0qxn4ee" path="res://scenes/视频播放器/icon/音量+_btn.png" id="7_7a4r7"]
+[ext_resource type="Texture2D" uid="uid://cqnlt5a46k635" path="res://scenes/视频播放器/icon/音量-_btn.png" id="7_jhei2"]
+[ext_resource type="Texture2D" uid="uid://cyedpicwrhuiq" path="res://scenes/视频播放器/icon/退出_btn.png" id="9_nwaj7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a7cv6"]
+texture = ExtResource("2_ue7f5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7a4r7"]
+texture = ExtResource("3_2o7x4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nwaj7"]
+texture = ExtResource("4_a7cv6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_er7l6"]
+texture = ExtResource("5_7a4r7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6oiep"]
+texture = ExtResource("6_jhei2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jhei2"]
+texture = ExtResource("7_7a4r7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c8d4w"]
+texture = ExtResource("7_jhei2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vap8v"]
+texture = ExtResource("9_nwaj7")
+
+[node name="VideoToolBar" type="Control" unique_id=1510533818]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+script = ExtResource("1_6vbhf")
+
+[node name="Bar" type="PanelContainer" parent="." unique_id=214660227]
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 200.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Bar" unique_id=562821988]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="BtnPauseAndPlay" type="Button" parent="Bar/HBoxContainer" unique_id=1501720263]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_a7cv6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7a4r7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a7cv6")
+toggle_mode = true
+
+[node name="BtnStop" type="Button" parent="Bar/HBoxContainer" unique_id=774761585]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_nwaj7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nwaj7")
+
+[node name="BtnRewind" type="Button" parent="Bar/HBoxContainer" unique_id=1900763856]
+custom_minimum_size = Vector2(67, 67)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_er7l6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_er7l6")
+
+[node name="BtnForward" type="Button" parent="Bar/HBoxContainer" unique_id=306501252]
+custom_minimum_size = Vector2(67, 67)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_6oiep")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6oiep")
+
+[node name="HSliderPlayback" type="HSlider" parent="Bar/HBoxContainer" unique_id=926439863]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="BtnMute" type="Button" parent="Bar/HBoxContainer" unique_id=913804148]
+custom_minimum_size = Vector2(40, 38)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_jhei2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_c8d4w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jhei2")
+toggle_mode = true
+
+[node name="HSliderVolume" type="HSlider" parent="Bar/HBoxContainer" unique_id=1104415736]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 4
+value = 50.0
+
+[node name="BtnExit" type="Button" parent="Bar/HBoxContainer" unique_id=1078991921]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_vap8v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vap8v")

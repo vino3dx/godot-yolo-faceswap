@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bfipx6ublab0a"]
+
+[ext_resource type="Texture2D" uid="uid://dkwunafu51dok" path="res://assets/ui/common/返回键.png" id="1_reuux"]
+[ext_resource type="Texture2D" uid="uid://dcnjmf0ua4crk" path="res://assets/ui/common/返回键暗.png" id="2_jafs3"]
+[ext_resource type="Script" uid="uid://b7gaekeo1461y" path="res://scenes/common/btn_to_home.gd" id="3_jafs3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jafs3"]
+texture = ExtResource("1_reuux")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xu82m"]
+texture = ExtResource("2_jafs3")
+
+[node name="Btn_BackToHome" type="Button" unique_id=1013683695]
+offset_right = 354.0
+offset_bottom = 124.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxTexture_jafs3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xu82m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jafs3")
+script = ExtResource("3_jafs3")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://bq2y464m52ir6"]
+
+[ext_resource type="Script" uid="uid://bwaue53h311i6" path="res://scenes/face_swapping/level_4.gd" id="1_4hi8p"]
+[ext_resource type="Texture2D" uid="uid://dhhovxw18837u" path="res://assets/ui/face_swapping/btn_返回.png" id="3_ykt6o"]
+[ext_resource type="Texture2D" uid="uid://dfxnjgnm0ioru" path="res://assets/ui/face_swapping/lv0_背景.png" id="4_6dbbw"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="4_820y1"]
+[ext_resource type="Texture2D" uid="uid://8inmhgtukfjv" path="res://assets/ui/face_swapping/场景.png" id="5_c6c4k"]
+[ext_resource type="Texture2D" uid="uid://ie0600oc7jln" path="res://assets/ui/face_swapping/btn_重拍.png" id="5_jbcsa"]
+[ext_resource type="Texture2D" uid="uid://cabi67hests2c" path="res://assets/ui/face_swapping/btn_首页.png" id="6_6dbbw"]
+[ext_resource type="Texture2D" uid="uid://cv3vh3utch2tx" path="res://assets/ui/face_swapping/男.png" id="6_hbv5i"]
+[ext_resource type="Texture2D" uid="uid://b3dfjq4m2prcc" path="res://assets/ui/face_swapping/女.png" id="7_ep4am"]
+
+[node name="Level4" type="Control" unique_id=1166104839]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4hi8p")
+metadata/_edit_horizontal_guides_ = [908.0, 1032.0, 1156.0]
+metadata/_edit_vertical_guides_ = [3575.0]
+
+[node name="Boy" type="TextureRect" parent="." unique_id=590311462]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6dbbw")
+
+[node name="Frame" type="TextureRect" parent="Boy" unique_id=573372164]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_c6c4k")
+expand_mode = 1
+
+[node name="男" type="TextureRect" parent="Boy" unique_id=231611653]
+layout_mode = 0
+offset_left = 1348.0
+offset_top = 327.0
+offset_right = 2194.0
+offset_bottom = 1967.0
+scale = Vector2(1.25, 1.25)
+mouse_filter = 2
+texture = ExtResource("6_hbv5i")
+
+[node name="女" type="TextureRect" parent="Boy" unique_id=1687001853]
+visible = false
+layout_mode = 0
+offset_left = 1851.0001
+offset_top = 544.19446
+offset_right = 2612.0
+offset_bottom = 2010.1945
+scale = Vector2(1.25, 1.25)
+mouse_filter = 2
+texture = ExtResource("7_ep4am")
+
+[node name="Girl" type="TextureRect" parent="." unique_id=1647311729]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6dbbw")
+
+[node name="Frame" type="TextureRect" parent="Girl" unique_id=1732622030]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_c6c4k")
+expand_mode = 1
+
+[node name="男" type="TextureRect" parent="Girl" unique_id=727138096]
+visible = false
+layout_mode = 0
+offset_left = 1105.0
+offset_top = 327.0
+offset_right = 1951.0
+offset_bottom = 1967.0
+scale = Vector2(1.25, 1.25)
+mouse_filter = 2
+texture = ExtResource("6_hbv5i")
+
+[node name="女" type="TextureRect" parent="Girl" unique_id=523116574]
+layout_mode = 0
+offset_left = 1429.0001
+offset_top = 544.19446
+offset_right = 2190.0
+offset_bottom = 2010.1945
+scale = Vector2(1.25, 1.25)
+mouse_filter = 2
+texture = ExtResource("7_ep4am")
+
+[node name="Both" type="TextureRect" parent="." unique_id=868225664]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6dbbw")
+
+[node name="Frame" type="TextureRect" parent="Both" unique_id=69366916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_c6c4k")
+expand_mode = 1
+
+[node name="男" type="TextureRect" parent="Both" unique_id=785720462]
+layout_mode = 0
+offset_left = 1105.0
+offset_top = 327.0
+offset_right = 1951.0
+offset_bottom = 1967.0
+scale = Vector2(1.25, 1.25)
+mouse_filter = 2
+texture = ExtResource("6_hbv5i")
+
+[node name="女" type="TextureRect" parent="Both" unique_id=104224657]
+layout_mode = 0
+offset_left = 1851.0001
+offset_top = 544.19446
+offset_right = 2612.0
+offset_bottom = 2010.1945
+scale = Vector2(1.25, 1.25)
+mouse_filter = 2
+texture = ExtResource("7_ep4am")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1917839518]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -265.0
+offset_top = -172.0
+offset_right = -54.0
+offset_bottom = 172.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 28
+
+[node name="BtnBack" type="Button" parent="VBoxContainer" unique_id=1417410838]
+layout_mode = 2
+icon = ExtResource("3_ykt6o")
+flat = true
+script = ExtResource("4_820y1")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnTakePhoto" type="Button" parent="VBoxContainer" unique_id=401638265]
+layout_mode = 2
+icon = ExtResource("5_jbcsa")
+flat = true
+script = ExtResource("4_820y1")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnToHome" type="Button" parent="VBoxContainer" unique_id=258866991]
+layout_mode = 2
+icon = ExtResource("6_6dbbw")
+flat = true
+script = ExtResource("4_820y1")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[connection signal="pressed" from="VBoxContainer/BtnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnTakePhoto" to="." method="_on_btn_take_photo_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnToHome" to="." method="_on_btn_to_home_pressed"]

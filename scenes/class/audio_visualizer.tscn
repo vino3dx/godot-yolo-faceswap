@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cdep5u13wvq3k"]
+
+[ext_resource type="Script" uid="uid://ba3m4eutbkg6t" path="res://scenes/class/audio_visualizer.gd" id="1_h4yf5"]
+
+[node name="AudioVisualizer" type="Node2D" unique_id=822268912]
+script = ExtResource("1_h4yf5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1930647337]
+bus = &"Visualizer"
+
+[node name="Bars" type="Node2D" parent="." unique_id=1577399205]

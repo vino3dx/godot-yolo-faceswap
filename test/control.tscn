@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cuy0ibq0ak853"]
+
+[sub_resource type="GDScript" id="GDScript_exgxu"]
+script/source = "extends Node
+class_name TCPLink
+
+var client: StreamPeerTCP = StreamPeerTCP.new()
+var is_connected: bool = false
+
+func _ready() -> void:
+	var err = client.connect_to_host(\"127.0.0.1\", 60000)
+	if err == OK:
+		print(\"开始连接服务器...\")
+	else:
+		print(\"连接发起失败: \", err)
+
+func _process(_delta: float) -> void:
+	# 2. 必须在 _process 中不断轮询（Update）连接状态
+	client.poll()
+	
+	var status = client.get_status()
+	
+	if status == StreamPeerTCP.STATUS_CONNECTED:
+		if not is_connected:
+			print(\"成功连接到服务器！\")
+			is_connected = true
+			# 连接成功后，发送一条初始消息
+			send_data(\"1920 1080 2 图片名称\")
+		
+		# 3. 持续检查是否有服务器发来的数据
+		if client.get_available_bytes() > 0:
+			receive_data()
+			
+	elif status == StreamPeerTCP.STATUS_CONNECTING:
+		# 正在连接中，等待...
+		pass
+	else:
+		# 连接断开或出错
+		if is_connected:
+			print(\"与服务器断开连接。\")
+			is_connected = false
+
+
+# 发送数据的函数
+func send_data(message: String) -> void:
+	if client.get_status() == StreamPeerTCP.STATUS_CONNECTED:
+		# 将字符串转换为字节数组发送
+		var bytes = message.to_utf8_buffer()
+		client.put_data(bytes)
+		print(\"已发送: \", message)
+
+
+# 接收数据的函数
+func receive_data() -> void:
+	var available_bytes = client.get_available_bytes()
+	if available_bytes > 0:
+		# 读取数据并转换为字符串
+		var data_array = client.get_data(available_bytes)
+		var error_code = data_array[0]
+		var bytes = data_array[1]
+		
+		if error_code == OK:
+			var message = bytes.get_string_from_utf8()
+			print(\"收到服务器消息: \", message)
+"
+
+[node name="Control" type="Control" unique_id=533469912]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TCPLink" type="Node" parent="." unique_id=900881497]
+script = SubResource("GDScript_exgxu")
+metadata/_custom_type_script = "uid://v020lywny8kc"

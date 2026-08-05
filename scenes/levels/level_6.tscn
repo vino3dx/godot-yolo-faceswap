@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://1tavbqcy6kdy"]
+
+[ext_resource type="PackedScene" uid="uid://b27erp15evhd2" path="res://scenes/common/bar_level_info.tscn" id="1_gfuhv"]
+[ext_resource type="Script" uid="uid://dcheygi06v6hw" path="res://scenes/levels/level_6.gd" id="1_m5qie"]
+[ext_resource type="Texture2D" uid="uid://dnpd1glbn24id" path="res://assets/ui/level6/图层_0.png" id="1_y2agi"]
+[ext_resource type="Texture2D" uid="uid://bwu0g3exj6h65" path="res://assets/ui/level6/提示框.png" id="3_741xk"]
+[ext_resource type="FontFile" uid="uid://basb3rl3ng8mi" path="res://assets/fonts/SOURCEHANSERIF-BOLD.TTC" id="4_i0fhw"]
+[ext_resource type="Texture2D" uid="uid://csckeqbbrh3u" path="res://assets/ui/level6/帮新郎.png" id="5_5wshb"]
+[ext_resource type="Texture2D" uid="uid://bgtul4mck4kw4" path="res://assets/ui/level6/帮新娘.png" id="6_7x7cx"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="6_b6i88"]
+[ext_resource type="Texture2D" uid="uid://n0o21gb4ggxl" path="res://assets/ui/level6/新娘当家.png" id="8_b6i88"]
+[ext_resource type="Texture2D" uid="uid://dflmmkcr6d7ir" path="res://assets/ui/level6/新郎当家.png" id="9_e18e5"]
+[ext_resource type="Script" uid="uid://b0mk24k47umbk" path="res://scripts/level_anim.gd" id="11_kydov"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5wshb"]
+font = ExtResource("4_i0fhw")
+font_size = 71
+font_color = Color(0.21176471, 0.12156863, 0.023529412, 1)
+
+[node name="Level6" type="Control" unique_id=1637892210]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m5qie")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1991823946]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y2agi")
+expand_mode = 1
+
+[node name="BarLevelInfo" parent="." unique_id=1210337805 instance=ExtResource("1_gfuhv")]
+z_index = 1
+layout_mode = 0
+
+[node name="Label" parent="BarLevelInfo/Icon1" parent_id_path=PackedInt32Array(1210337805, 1283650277) index="0" unique_id=1833311624]
+offset_left = -130.0
+offset_right = 118.0
+text = "坐床"
+
+[node name="Label2" parent="BarLevelInfo/Icon2" parent_id_path=PackedInt32Array(1210337805, 1839861947) index="0" unique_id=1771531278]
+offset_left = -273.0
+offset_right = 263.0
+text = "谁先坐到床上决定谁当家"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1278540645]
+layout_mode = 0
+offset_left = 1184.0
+offset_top = 409.0
+offset_right = 2656.0
+offset_bottom = 619.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("3_741xk")
+
+[node name="Label" type="Label" parent="." unique_id=409380687]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -726.0
+offset_top = -648.0
+offset_right = 726.0
+offset_bottom = -484.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "点击下方按钮，帮一方抢先坐到床上吧！"
+label_settings = SubResource("LabelSettings_5wshb")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton" type="Button" parent="." unique_id=715166933]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 1140.0
+offset_right = 1618.0
+offset_bottom = 1427.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("5_5wshb")
+flat = true
+script = ExtResource("6_b6i88")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="TextureButton2" type="Button" parent="." unique_id=2032240461]
+layout_mode = 0
+offset_left = 2229.0
+offset_top = 1148.0
+offset_right = 2960.0
+offset_bottom = 1427.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("6_7x7cx")
+flat = true
+script = ExtResource("6_b6i88")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=220362217]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand = true
+
+[node name="Selection2" type="TextureRect" parent="." unique_id=631083029]
+layout_mode = 0
+offset_left = 1053.0
+offset_top = 535.0
+offset_right = 2787.0
+offset_bottom = 1381.0
+texture = ExtResource("8_b6i88")
+
+[node name="Selection1" type="TextureRect" parent="." unique_id=910758701]
+layout_mode = 0
+offset_left = 1053.0
+offset_top = 535.0
+offset_right = 2787.0
+offset_bottom = 1381.0
+texture = ExtResource("9_e18e5")
+
+[node name="UIAnimator" type="Node" parent="." unique_id=933278097 node_paths=PackedStringArray("targets")]
+script = ExtResource("11_kydov")
+targets = [NodePath("../BarLevelInfo/Icon1"), NodePath("../BarLevelInfo/Icon2"), NodePath("../TextureRect"), NodePath("../Label"), NodePath("../TextureButton"), NodePath("../TextureButton2"), null, null, null, null, null, null, null, null, null]
+start_offsets = Array[Vector2]([Vector2(-300, 0), Vector2(-250, 0), Vector2(0, -100), Vector2(0, -100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(-100, 0), Vector2(0, 100), Vector2(100, 0)])
+start_scales = Array[Vector2]([Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0.8, 0.8), Vector2(0.8, 0.8)])
+stagger = 0.2
+metadata/_custom_type_script = "uid://b0mk24k47umbk"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+
+[editable path="BarLevelInfo"]

@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://bcfsan1jfka2w"]
+
+[ext_resource type="Script" uid="uid://dhdtxxiex5ngu" path="res://scenes/levels/level_1.gd" id="1_6761a"]
+[ext_resource type="Texture2D" uid="uid://coow75ucq211m" path="res://assets/ui/level1/关卡1-背景.png" id="2_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://c0e1sp0lhaq6v" path="res://scenes/common/item_gift_card.tscn" id="3_dd0lh"]
+[ext_resource type="Texture2D" uid="uid://d1r00joipqkst" path="res://assets/ui/level1/提问框.png" id="3_qxy0u"]
+[ext_resource type="PackedScene" uid="uid://b27erp15evhd2" path="res://scenes/common/bar_level_info.tscn" id="3_wtwp4"]
+[ext_resource type="Script" uid="uid://b0mk24k47umbk" path="res://scripts/level_anim.gd" id="4_bfxgj"]
+[ext_resource type="FontFile" uid="uid://kemdb6ddopbi" path="res://assets/fonts/SOURCEHANSERIF-MEDIUM.TTC" id="4_mm8aj"]
+[ext_resource type="Texture2D" uid="uid://d4nw0ibcxk3to" path="res://assets/ui/level1/猪脚.png" id="7_wtwp4"]
+[ext_resource type="PackedScene" uid="uid://clvquditrjkyd" path="res://scenes/common/btn_confirm.tscn" id="9_np2pn"]
+[ext_resource type="PackedScene" uid="uid://bfipx6ublab0a" path="res://scenes/common/btn_to_home.tscn" id="10_bahl2"]
+[ext_resource type="Texture2D" uid="uid://daqavnlf4jdbo" path="res://assets/ui/level1/选项框.png" id="14_iwr0g"]
+[ext_resource type="Texture2D" uid="uid://ca5adq32xhsgg" path="res://assets/ui/level1/面条.png" id="16_iwr0g"]
+[ext_resource type="Texture2D" uid="uid://dqnwmxvlf7pww" path="res://assets/ui/level1/糖.png" id="17_np2pn"]
+[ext_resource type="Texture2D" uid="uid://cgpolk6lumdsd" path="res://assets/ui/level1/酒.png" id="18_v6ha0"]
+[ext_resource type="Texture2D" uid="uid://biysjvo65diqr" path="res://assets/ui/level1/布匹.png" id="19_v6ha0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wtwp4"]
+font = ExtResource("4_mm8aj")
+font_size = 80
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwr0g"]
+paragraph_spacing = 1.485
+font_size = 61
+
+[node name="Level1" type="Control" unique_id=61875391]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6761a")
+
+[node name="Background" type="TextureRect" parent="." unique_id=331756260]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mm8aj")
+expand_mode = 1
+
+[node name="LevelName" parent="." unique_id=1210337805 instance=ExtResource("3_wtwp4")]
+layout_mode = 0
+
+[node name="Label" parent="LevelName/Icon1" parent_id_path=PackedInt32Array(1210337805, 1283650277) index="0" unique_id=1833311624]
+offset_left = -209.0
+offset_right = 197.0
+
+[node name="Icon3" type="TextureRect" parent="." unique_id=1500826704]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 27.5
+offset_top = -506.0
+offset_right = 1217.5
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("3_qxy0u")
+
+[node name="Label" type="Label" parent="Icon3" unique_id=624806773]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -117.5
+offset_right = 400.0
+offset_bottom = 117.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "媒人去女方家提亲，
+应该带上什么礼物呢？"
+label_settings = SubResource("LabelSettings_wtwp4")
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="GiftPanel" type="Control" parent="." unique_id=1313840289]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1697.5
+offset_top = -994.0
+offset_right = 1697.5
+offset_bottom = -302.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="选项框" type="TextureRect" parent="GiftPanel" unique_id=341527880]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1697.5
+offset_top = -346.0
+offset_right = 1697.5
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_iwr0g")
+
+[node name="Label" type="Label" parent="GiftPanel" unique_id=1101641815]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -579.0
+offset_top = 9.0
+offset_right = 724.0
+offset_bottom = 93.0
+grow_horizontal = 2
+text = "请多选礼物（至少包含猪肘和面条）"
+label_settings = SubResource("LabelSettings_iwr0g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GiftPanel" unique_id=868336049]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1593.0
+offset_top = -230.0
+offset_right = 1612.0
+offset_bottom = 304.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 35
+
+[node name="GiftCard1" parent="GiftPanel/HBoxContainer" unique_id=1746904335 instance=ExtResource("3_dd0lh")]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_texture = ExtResource("7_wtwp4")
+text = "猪肘"
+
+[node name="GiftCard2" parent="GiftPanel/HBoxContainer" unique_id=1744760153 instance=ExtResource("3_dd0lh")]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_texture = ExtResource("16_iwr0g")
+text = "面条"
+
+[node name="GiftCard3" parent="GiftPanel/HBoxContainer" unique_id=1515012183 instance=ExtResource("3_dd0lh")]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_texture = ExtResource("17_np2pn")
+text = "糖"
+
+[node name="GiftCard4" parent="GiftPanel/HBoxContainer" unique_id=1269232782 instance=ExtResource("3_dd0lh")]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_texture = ExtResource("18_v6ha0")
+text = "酒"
+
+[node name="GiftCard5" parent="GiftPanel/HBoxContainer" unique_id=13937585 instance=ExtResource("3_dd0lh")]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_texture = ExtResource("19_v6ha0")
+text = "布匹"
+
+[node name="Btn_Confirm" parent="." unique_id=721568396 instance=ExtResource("9_np2pn")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -372.0
+offset_top = -259.0
+offset_right = 372.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Btn_BackToHome" parent="." unique_id=1317909387 instance=ExtResource("10_bahl2")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.0
+offset_top = -210.0
+offset_right = -200.0
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="UIAnimator" type="Node" parent="." unique_id=813160081 node_paths=PackedStringArray("targets")]
+script = ExtResource("4_bfxgj")
+targets = [NodePath("../LevelName/Icon1"), NodePath("../LevelName/Icon2"), NodePath("../Icon3"), NodePath("../GiftPanel"), NodePath("../Btn_Confirm"), NodePath("../Btn_BackToHome")]
+start_offsets = Array[Vector2]([Vector2(-300, 0), Vector2(-250, 0), Vector2(0, -100), Vector2(0, 300), Vector2(0, 0), Vector2(100, 0)])
+start_scales = Array[Vector2]([Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8)])
+stagger = 0.3
+out_rotation = 0.0
+
+[connection signal="pressed" from="Btn_Confirm" to="." method="_on_btn_confirm_pressed"]
+
+[editable path="LevelName"]

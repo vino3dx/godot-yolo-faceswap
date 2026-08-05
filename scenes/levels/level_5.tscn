@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://bq13tlnwiujb4"]
+
+[ext_resource type="Texture2D" uid="uid://c0ny14v0murk8" path="res://assets/ui/level5/已修改_背景.jpg" id="1_845dy"]
+[ext_resource type="PackedScene" uid="uid://b27erp15evhd2" path="res://scenes/common/bar_level_info.tscn" id="1_r1vs7"]
+[ext_resource type="Script" uid="uid://der7nhypiusdi" path="res://scenes/levels/level_5.gd" id="1_vm1kt"]
+[ext_resource type="Texture2D" uid="uid://dhr8wpauujy08" path="res://assets/ui/level5/pnl_框.png" id="4_ahsud"]
+[ext_resource type="FontFile" uid="uid://basb3rl3ng8mi" path="res://assets/fonts/SOURCEHANSERIF-BOLD.TTC" id="4_l8eod"]
+[ext_resource type="Texture2D" uid="uid://b3u5tykt7qpf7" path="res://assets/ui/level5/btn_五谷丰登_normal.png" id="6_ahsud"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="6_fsnos"]
+[ext_resource type="Texture2D" uid="uid://dlilhcnvuyk8h" path="res://assets/ui/level5/btn_五谷丰登_pressed.png" id="7_iu1q5"]
+[ext_resource type="Texture2D" uid="uid://n18lw0qeljaf" path="res://assets/ui/level5/btn_早生贵子_normal.png" id="9_ahsud"]
+[ext_resource type="Texture2D" uid="uid://m75042whtlpt" path="res://assets/ui/level5/下方框.png" id="9_vvoq0"]
+[ext_resource type="Texture2D" uid="uid://dhditjys28l5m" path="res://assets/ui/level5/btn_早生贵子_pressed.png" id="10_iu1q5"]
+[ext_resource type="Script" uid="uid://bjw8ow1ojmqb0" path="res://scripts/current_step.gd" id="11_0y7y4"]
+[ext_resource type="VideoStream" uid="uid://dyjf6y1p6c5o" path="res://assets/video/踩斗动画1.mp4" id="11_ahsud"]
+[ext_resource type="Texture2D" uid="uid://bgfjsgp5gs87l" path="res://assets/ui/level5/下方光线_.png" id="11_j14br"]
+[ext_resource type="Texture2D" uid="uid://dydclugo2w6ix" path="res://assets/ui/level5/btn_点击新娘_normal.png" id="12_0y7y4"]
+[ext_resource type="Texture2D" uid="uid://dxnngxhsmj5nd" path="res://assets/ui/level5/btn_点击新娘_active.png" id="12_gruok"]
+[ext_resource type="Texture2D" uid="uid://dr0lsixnpqdd7" path="res://assets/ui/level5/btn_选择祝福_normal.png" id="13_gruok"]
+[ext_resource type="Texture2D" uid="uid://be3vmij3vmo4n" path="res://assets/ui/level5/btn_选择祝福_active.png" id="14_gruok"]
+[ext_resource type="Texture2D" uid="uid://bgwvvv65v42so" path="res://assets/ui/level5/btn_祝福成功_normal.png" id="14_h717f"]
+[ext_resource type="Texture2D" uid="uid://bbas8hh1mx0xu" path="res://assets/ui/level5/btn_祝福成功_active.png" id="16_h717f"]
+[ext_resource type="Texture2D" uid="uid://deljvxyr2pnvl" path="res://assets/ui/level5/新娘_nomal.png" id="19_sfnul"]
+[ext_resource type="Texture2D" uid="uid://dcieyoumjgtfp" path="res://assets/ui/level5/新娘_selected.png" id="20_fea5r"]
+[ext_resource type="Script" uid="uid://b0mk24k47umbk" path="res://scripts/level_anim.gd" id="22_wnnhf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sfnul"]
+font = ExtResource("4_l8eod")
+font_size = 91
+font_color = Color(0.21176471, 0.12156863, 0.023529412, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxx4w"]
+texture = ExtResource("6_ahsud")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vvoq0"]
+texture = ExtResource("7_iu1q5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tqnj0"]
+texture = ExtResource("9_ahsud")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dwyms"]
+texture = ExtResource("10_iu1q5")
+
+[node name="Level5" type="Control" unique_id=1043452788]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vm1kt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1827562438]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_845dy")
+
+[node name="BarLevelInfo" parent="." unique_id=1210337805 instance=ExtResource("1_r1vs7")]
+z_index = 1
+layout_mode = 0
+
+[node name="Label" parent="BarLevelInfo/Icon1" parent_id_path=PackedInt32Array(1210337805, 1283650277) index="0" unique_id=1833311624]
+offset_left = -130.0
+offset_right = 118.0
+text = " 踩斗"
+
+[node name="Label2" parent="BarLevelInfo/Icon2" parent_id_path=PackedInt32Array(1210337805, 1839861947) index="0" unique_id=1771531278]
+offset_left = -180.0
+offset_right = 170.0
+text = "把富贵留给娘家"
+
+[node name="提示框" type="TextureRect" parent="." unique_id=551963763]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 342.0
+offset_top = -376.0
+offset_right = 1370.0
+offset_bottom = 302.0
+grow_vertical = 2
+texture = ExtResource("4_ahsud")
+
+[node name="Label" type="Label" parent="提示框" unique_id=1206807544]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -377.0
+offset_top = -101.0
+offset_right = 377.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "点击新娘
+让她踩上斗吧!"
+label_settings = SubResource("LabelSettings_sfnul")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BtnSelection1" type="Button" parent="." unique_id=997028207]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1300.0
+offset_top = -425.0
+offset_right = -249.0
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxTexture_mxx4w")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vvoq0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mxx4w")
+script = ExtResource("6_fsnos")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnSelection2" type="Button" parent="." unique_id=2110277187]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1300.0
+offset_top = -33.0
+offset_right = -249.0
+offset_bottom = 306.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxTexture_tqnj0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dwyms")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tqnj0")
+script = ExtResource("6_fsnos")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnBride" type="TextureButton" parent="." unique_id=807447812]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -601.0
+offset_right = 228.0
+offset_bottom = 423.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("19_sfnul")
+texture_pressed = ExtResource("20_fea5r")
+texture_focused = ExtResource("20_fea5r")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=293561963]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stream = ExtResource("11_ahsud")
+expand = true
+
+[node name="下方框" type="TextureRect" parent="." unique_id=1874411776]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1066.0
+offset_top = -200.0
+offset_right = 1066.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("9_vvoq0")
+
+[node name="CurrentStep" type="TextureRect" parent="." unique_id=193211592]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -443.0
+offset_top = -91.0
+offset_right = 443.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("11_j14br")
+script = ExtResource("11_0y7y4")
+step1_normal = ExtResource("12_0y7y4")
+step1_active = ExtResource("12_gruok")
+step2_normal = ExtResource("13_gruok")
+step2_active = ExtResource("14_gruok")
+step3_normal = ExtResource("14_h717f")
+step3_active = ExtResource("16_h717f")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CurrentStep" unique_id=880068872]
+layout_mode = 0
+offset_left = -486.0
+offset_top = -63.0
+offset_right = 1371.0
+offset_bottom = 68.0
+theme_override_constants/separation = 141
+alignment = 1
+
+[node name="Btn点击新娘Normal" type="TextureRect" parent="CurrentStep/HBoxContainer" unique_id=1551764518]
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("12_gruok")
+
+[node name="Btn选择祝福Normal" type="TextureRect" parent="CurrentStep/HBoxContainer" unique_id=79951472]
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("13_gruok")
+
+[node name="Btn祝福成功Normal" type="TextureRect" parent="CurrentStep/HBoxContainer" unique_id=1737302811]
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("14_h717f")
+
+[node name="UIAnimator" type="Node" parent="." unique_id=439375703 node_paths=PackedStringArray("targets")]
+script = ExtResource("22_wnnhf")
+targets = [NodePath("../BarLevelInfo/Icon1"), NodePath("../BarLevelInfo/Icon2"), NodePath("../提示框"), NodePath("../BtnSelection1"), NodePath("../BtnSelection2"), NodePath("../下方框"), NodePath("../CurrentStep"), null, null, null, null, null, null, null, null]
+start_offsets = Array[Vector2]([Vector2(-300, 0), Vector2(-250, 0), Vector2(0, -100), Vector2(0, -100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(-100, 0), Vector2(0, 100), Vector2(100, 0)])
+start_scales = Array[Vector2]([Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0.8, 0.8), Vector2(0.8, 0.8)])
+stagger = 0.2
+metadata/_custom_type_script = "uid://b0mk24k47umbk"
+
+[connection signal="pressed" from="BtnSelection1" to="." method="_on_btn_selection_1_pressed"]
+[connection signal="pressed" from="BtnSelection2" to="." method="_on_btn_selection_2_pressed"]
+[connection signal="toggled" from="BtnBride" to="." method="_on_btn_bride_toggled"]
+
+[editable path="BarLevelInfo"]

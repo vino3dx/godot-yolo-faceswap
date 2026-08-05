@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dmy8ish1a7mcc"]
+
+[ext_resource type="Script" uid="uid://6t1mdxy80bae" path="res://scenes/common/item_card_selection.gd" id="1_kqglx"]
+[ext_resource type="Texture2D" uid="uid://chynqvexknjfo" path="res://assets/ui/level4/lv4_1衣服.png" id="2_3f71n"]
+[ext_resource type="Texture2D" uid="uid://mgb5u41spniw" path="res://assets/ui/common/chk_checked.png" id="3_6722w"]
+[ext_resource type="Texture2D" uid="uid://y2upajf7x6xg" path="res://assets/ui/common/chk_unchecked.png" id="4_ip10y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1x6tr"]
+font_size = 53
+font_color = Color(0.21176471, 0.105882354, 0.105882354, 1)
+
+[node name="ItemCardSelection" type="VBoxContainer" unique_id=1680581470]
+custom_minimum_size = Vector2(324, 437)
+offset_right = 324.0
+offset_bottom = 437.0
+theme_override_constants/separation = 0
+script = ExtResource("1_kqglx")
+icon_texture = ExtResource("2_3f71n")
+text = "衣裳"
+
+[node name="Icon" type="TextureRect" parent="." unique_id=2069565809]
+layout_mode = 2
+texture = ExtResource("2_3f71n")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1244553756]
+layout_mode = 2
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=681367878]
+layout_mode = 2
+text = "衣裳"
+label_settings = SubResource("LabelSettings_1x6tr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer" unique_id=749017386]
+layout_mode = 2
+theme_override_icons/checked = ExtResource("3_6722w")
+theme_override_icons/unchecked = ExtResource("4_ip10y")
+
+[connection signal="toggled" from="HBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]

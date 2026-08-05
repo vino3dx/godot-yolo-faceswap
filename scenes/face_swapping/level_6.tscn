@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bfx4lgfafray5"]
+
+[ext_resource type="Script" uid="uid://bew7b7ck2e2gf" path="res://scenes/face_swapping/level_6.gd" id="1_sy4st"]
+[ext_resource type="Texture2D" uid="uid://do0nncyt7cd0c" path="res://assets/ui/face_swapping/二维码区域.png" id="4_g0pxs"]
+[ext_resource type="Texture2D" uid="uid://dfxnjgnm0ioru" path="res://assets/ui/face_swapping/lv0_背景.png" id="4_ngl22"]
+[ext_resource type="Texture2D" uid="uid://cbnqsi6drgkov" path="res://assets/ui/face_swapping/qr-code_wedding.png" id="5_wrbpn"]
+[ext_resource type="Texture2D" uid="uid://ie0600oc7jln" path="res://assets/ui/face_swapping/btn_重拍.png" id="6_wrbpn"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="7_seb31"]
+[ext_resource type="Texture2D" uid="uid://dhhovxw18837u" path="res://assets/ui/face_swapping/btn_返回.png" id="9_5cp3y"]
+[ext_resource type="Texture2D" uid="uid://cabi67hests2c" path="res://assets/ui/face_swapping/btn_首页.png" id="9_wrbpn"]
+
+[node name="Level6" type="Control" unique_id=65886956]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sy4st")
+
+[node name="Both" type="TextureRect" parent="." unique_id=1906543827]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_ngl22")
+
+[node name="QrCode" type="TextureRect" parent="." unique_id=1901980126]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -210.5
+offset_right = 413.0
+offset_bottom = 210.5
+grow_vertical = 2
+texture = ExtResource("4_g0pxs")
+
+[node name="QrCode2" type="TextureRect" parent="QrCode" unique_id=656920792]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -226.76
+offset_right = 200.0
+offset_bottom = 173.23999
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("5_wrbpn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=323966664]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -265.0
+offset_top = -172.0
+offset_right = -54.0
+offset_bottom = 172.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 28
+
+[node name="BtnBack" type="Button" parent="VBoxContainer" unique_id=794856507]
+layout_mode = 2
+icon = ExtResource("9_5cp3y")
+flat = true
+script = ExtResource("7_seb31")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnTakePhoto" type="Button" parent="VBoxContainer" unique_id=1666724456]
+layout_mode = 2
+icon = ExtResource("6_wrbpn")
+flat = true
+script = ExtResource("7_seb31")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="BtnToHome" type="Button" parent="VBoxContainer" unique_id=787801977]
+layout_mode = 2
+icon = ExtResource("9_wrbpn")
+flat = true
+script = ExtResource("7_seb31")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[connection signal="pressed" from="VBoxContainer/BtnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnTakePhoto" to="." method="_on_btn_take_photo_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnToHome" to="." method="_on_btn_to_home_pressed"]

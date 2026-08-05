@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dnw0kgpoteovr"]
+
+[ext_resource type="Texture2D" uid="uid://dtwwq04pg8ix3" path="res://assets/ui/level3/btn_爹爹_normal.png" id="1_c46p3"]
+[ext_resource type="Texture2D" uid="uid://4oun1o48jtgr" path="res://assets/ui/level3/btn_爹爹_pressed.png" id="2_3gub7"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="3_ccuqa"]
+[ext_resource type="Texture2D" uid="uid://dvv0gpwfekcg6" path="res://assets/ui/level3/文字框.png" id="4_h1305"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jql0x"]
+texture = ExtResource("1_c46p3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdsi4"]
+texture = ExtResource("2_3gub7")
+
+[node name="BtnPerson" type="Control" unique_id=827942009]
+custom_minimum_size = Vector2(296, 422)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 296.0
+offset_bottom = 422.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+metadata/_edit_horizontal_guides_ = [422.0]
+metadata/_edit_vertical_guides_ = [296.0]
+
+[node name="BtnPerson1" type="Button" parent="." unique_id=817073219]
+layout_mode = 0
+offset_right = 306.0
+offset_bottom = 312.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_jql0x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kdsi4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jql0x")
+toggle_mode = true
+script = ExtResource("3_ccuqa")
+hover_scale = 1.0
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="选择框" type="Button" parent="." unique_id=1683427995]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 325.0
+offset_right = 296.0
+offset_bottom = 422.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.3882353, 0.14509805, 0.1254902, 1)
+theme_override_font_sizes/font_size = 52
+text = "爹爹"
+icon = ExtResource("4_h1305")
+flat = true
+icon_alignment = 1
+script = ExtResource("3_ccuqa")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"

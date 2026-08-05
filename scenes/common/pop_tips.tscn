@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bnjt80smvwnhy"]
+
+[ext_resource type="Texture2D" uid="uid://colhaehk3qam3" path="res://assets/ui/common/知识卡片.png" id="1_cr7kq"]
+[ext_resource type="Script" uid="uid://dldddrvkmfrfy" path="res://scenes/common/pop_tips.gd" id="1_dysuo"]
+[ext_resource type="FontFile" uid="uid://basb3rl3ng8mi" path="res://assets/fonts/SOURCEHANSERIF-BOLD.TTC" id="2_dysuo"]
+[ext_resource type="PackedScene" uid="uid://clvquditrjkyd" path="res://scenes/common/btn_confirm.tscn" id="4_cr7kq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p2ec6"]
+font = ExtResource("2_dysuo")
+font_size = 83
+font_color = Color(0, 0, 0, 1)
+
+[node name="PopTips" type="Control" unique_id=1663955867]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dysuo")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=924156537]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7294118)
+
+[node name="知识卡片" type="TextureRect" parent="." unique_id=1678977665]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -669.0
+offset_top = -552.5
+offset_right = 669.0
+offset_bottom = 552.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cr7kq")
+
+[node name="Label" type="Label" parent="." unique_id=1598635306]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.5
+offset_top = -157.0
+offset_right = 464.5
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "提亲要带猪肘、面条等礼物，表示诚意和祝福。"
+label_settings = SubResource("LabelSettings_p2ec6")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Btn_Confirm" parent="." unique_id=1097266416 instance=ExtResource("4_cr7kq")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -372.0
+offset_top = 230.00012
+offset_right = 372.0
+offset_bottom = 427.00012
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.725, 0.725)
+
+[connection signal="pressed" from="Btn_Confirm" to="." method="_on_confirm_btn_pressed"]

@@ -1,0 +1,78 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cb66gwlot8t0v"]
+
+[ext_resource type="Texture2D" uid="uid://d2rytd7j3nibc" path="res://assets/sprite/恭喜通关/恭喜通关_00000.png" id="1_vlkf5"]
+[ext_resource type="Texture2D" uid="uid://byx47uxfrwq71" path="res://assets/sprite/恭喜通关/恭喜通关_00001.png" id="2_f6gji"]
+[ext_resource type="Texture2D" uid="uid://bgiynhdpp7htk" path="res://assets/sprite/恭喜通关/恭喜通关_00002.png" id="3_aits8"]
+[ext_resource type="Texture2D" uid="uid://dpkvx7ygi54hv" path="res://assets/sprite/恭喜通关/恭喜通关_00003.png" id="4_eb5fl"]
+[ext_resource type="Texture2D" uid="uid://dycefmfk320lk" path="res://assets/sprite/恭喜通关/恭喜通关_00004.png" id="5_5yqa5"]
+[ext_resource type="Texture2D" uid="uid://dvownowk34wi2" path="res://assets/sprite/恭喜通关/恭喜通关_00005.png" id="6_0yx7y"]
+[ext_resource type="Texture2D" uid="uid://6iehja2nlk27" path="res://assets/sprite/恭喜通关/恭喜通关_00006.png" id="7_05n4q"]
+[ext_resource type="Texture2D" uid="uid://cv3ngkj12e564" path="res://assets/sprite/恭喜通关/恭喜通关_00007.png" id="8_1hbef"]
+[ext_resource type="Texture2D" uid="uid://b8mmfcp5gldxg" path="res://assets/sprite/恭喜通关/恭喜通关_00008.png" id="9_kmhs0"]
+[ext_resource type="Texture2D" uid="uid://bt1t5yvbjc2u4" path="res://assets/sprite/恭喜通关/恭喜通关_00009.png" id="10_rub4s"]
+[ext_resource type="Texture2D" uid="uid://tcno2rnso3p1" path="res://assets/sprite/恭喜通关/恭喜通关_00010.png" id="11_lubij"]
+[ext_resource type="Texture2D" uid="uid://cn523rvibugk6" path="res://assets/sprite/恭喜通关/恭喜通关_00011.png" id="12_tyo4g"]
+[ext_resource type="Texture2D" uid="uid://bv5he4fcmb2ar" path="res://assets/sprite/恭喜通关/恭喜通关_00012.png" id="13_21cj7"]
+[ext_resource type="Texture2D" uid="uid://dup14wmj4fk56" path="res://assets/sprite/恭喜通关/恭喜通关_00013.png" id="14_dvqmh"]
+[ext_resource type="Texture2D" uid="uid://bh1kfmw8i7dt6" path="res://assets/sprite/恭喜通关/恭喜通关_00014.png" id="15_nlvsa"]
+[ext_resource type="Texture2D" uid="uid://dxu56l82kkth2" path="res://assets/sprite/恭喜通关/恭喜通关_00015.png" id="16_ulkug"]
+[ext_resource type="Texture2D" uid="uid://do0f2bdqmejsn" path="res://assets/sprite/恭喜通关/恭喜通关_00016.png" id="17_gkutx"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vlkf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f6gji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aits8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eb5fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5yqa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0yx7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_05n4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1hbef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kmhs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rub4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lubij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tyo4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_21cj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dvqmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nlvsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ulkug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gkutx")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]

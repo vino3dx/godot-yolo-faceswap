@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://cjy7q5bayvg0a"]
+
+[ext_resource type="PackedScene" uid="uid://b27erp15evhd2" path="res://scenes/common/bar_level_info.tscn" id="1_06474"]
+[ext_resource type="Script" uid="uid://bx3dx2us3g1yu" path="res://scenes/levels/level_4.gd" id="1_ov8fk"]
+[ext_resource type="Texture2D" uid="uid://bpbqrx6ijr81u" path="res://assets/ui/level4/背景.png" id="1_vmkp1"]
+[ext_resource type="Texture2D" uid="uid://uch7qw1rqfw7" path="res://assets/ui/level4/选择框.png" id="3_glw47"]
+[ext_resource type="PackedScene" uid="uid://dmy8ish1a7mcc" path="res://scenes/common/item_card_selection.tscn" id="4_qvnao"]
+[ext_resource type="Texture2D" uid="uid://dy14jm11ib3ul" path="res://assets/ui/level4/lv4_2首饰.png" id="6_um320"]
+[ext_resource type="Texture2D" uid="uid://bq8o46xutyomn" path="res://assets/ui/level4/lv4_3酒.png" id="7_ov8fk"]
+[ext_resource type="Texture2D" uid="uid://q7e4c562bf7a" path="res://assets/ui/level4/lv4_4肉.png" id="8_pmra4"]
+[ext_resource type="Texture2D" uid="uid://dlp7kfs0lhjvc" path="res://assets/ui/level4/lv4_5盐.png" id="9_1bx01"]
+[ext_resource type="PackedScene" uid="uid://clvquditrjkyd" path="res://scenes/common/btn_confirm.tscn" id="10_4wsov"]
+[ext_resource type="Texture2D" uid="uid://cqpemea3nga8c" path="res://assets/ui/level4/lv4_6泡菜.png" id="10_vq5n0"]
+[ext_resource type="PackedScene" uid="uid://bfipx6ublab0a" path="res://scenes/common/btn_to_home.tscn" id="11_qvnao"]
+[ext_resource type="Texture2D" uid="uid://vjpl3clf087" path="res://assets/ui/level4/lv4_7米.png" id="11_xt2o7"]
+[ext_resource type="Texture2D" uid="uid://nl68i1xfbauw" path="res://assets/ui/level4/lv4_8大豆.png" id="12_beuva"]
+[ext_resource type="Script" uid="uid://b0mk24k47umbk" path="res://scripts/level_anim.gd" id="16_pmra4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vq5n0"]
+paragraph_spacing = 1.485
+font_size = 61
+
+[node name="Level4" type="Control" unique_id=1978595392]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ov8fk")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=843977407]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 3843.0
+offset_bottom = 2160.0
+texture = ExtResource("1_vmkp1")
+
+[node name="BarLevelInfo" parent="." unique_id=1210337805 instance=ExtResource("1_06474")]
+layout_mode = 0
+
+[node name="Label" parent="BarLevelInfo/Icon1" parent_id_path=PackedInt32Array(1210337805, 1283650277) index="0" unique_id=1833311624]
+offset_left = -130.0
+offset_right = 118.0
+text = "过礼"
+
+[node name="Label2" parent="BarLevelInfo/Icon2" parent_id_path=PackedInt32Array(1210337805, 1839861947) index="0" unique_id=1771531278]
+offset_left = -304.0
+offset_right = 294.0
+text = "将男方送来的过礼物品摆放到供桌上"
+
+[node name="GiftPanel" type="Control" parent="." unique_id=1041448329]
+custom_minimum_size = Vector2(3138, 646)
+layout_mode = 1
+anchors_preset = 0
+offset_left = 351.0
+offset_top = 1218.0
+offset_right = 3489.0
+offset_bottom = 1864.0
+
+[node name="选项框" type="TextureRect" parent="GiftPanel" unique_id=38409012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("3_glw47")
+
+[node name="Label" type="Label" parent="GiftPanel" unique_id=1204186973]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -326.5
+offset_top = 24.0
+offset_right = 326.5
+offset_bottom = 108.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "选择需要摆放的物品"
+label_settings = SubResource("LabelSettings_vq5n0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemCardSelection1" parent="GiftPanel" unique_id=1064771111 instance=ExtResource("4_qvnao")]
+layout_mode = 0
+offset_left = 63.5
+offset_top = 162.5
+offset_right = 387.5
+offset_bottom = 602.5
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+card_id = 1
+
+[node name="ItemCardSelection2" parent="GiftPanel" unique_id=289755797 instance=ExtResource("4_qvnao")]
+layout_mode = 0
+offset_left = 444.5
+offset_top = 162.5
+offset_right = 772.5
+offset_bottom = 602.5
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+icon_texture = ExtResource("6_um320")
+text = "首饰"
+card_id = 2
+
+[node name="ItemCardSelection3" parent="GiftPanel" unique_id=298558891 instance=ExtResource("4_qvnao")]
+layout_mode = 0
+offset_left = 829.5
+offset_top = 162.5
+offset_right = 1157.5
+offset_bottom = 602.5
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+icon_texture = ExtResource("7_ov8fk")
+text = "酒"
+card_id = 3
+
+[node name="ItemCardSelection4" parent="GiftPanel" unique_id=1920162169 instance=ExtResource("4_qvnao")]
+layout_mode = 0
+offset_left = 1214.5
+offset_top = 162.5
+offset_right = 1540.5
+offset_bottom = 602.5
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+icon_texture = ExtResource("8_pmra4")
+text = "肉"
+card_id = 4
+
+[node name="ItemCardSelection5" parent="GiftPanel" unique_id=616366524 instance=ExtResource("4_qvnao")]
+layout_mode = 0
+offset_left = 1597.5
+offset_top = 162.5
+offset_right = 1923.5
+offset_bottom = 602.5
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+icon_texture = ExtResource("9_1bx01")
+text = "盐"
+card_id = 5
+
+[node name="ItemCardSelection6" parent="GiftPanel" unique_id=1080625326 instance=ExtResource("4_qvnao")]
+layout_mode = 0
+offset_left = 1980.5
+offset_top = 162.5
+offset_right = 2308.5
+offset_bottom = 602.5
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+icon_texture = ExtResource("10_vq5n0")
+text = "泡菜"
+card_id = 6
+
+[node name="ItemCardSelection7" parent="GiftPanel" unique_id=1436135172 instance=ExtResource("4_qvnao")]
+layout_mode = 0
+offset_left = 2365.5
+offset_top = 162.5
+offset_right = 2693.5
+offset_bottom = 602.5
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+icon_texture = ExtResource("11_xt2o7")
+text = "大米"
+card_id = 7
+
+[node name="ItemCardSelection8" parent="GiftPanel" unique_id=343349426 instance=ExtResource("4_qvnao")]
+layout_mode = 0
+offset_left = 2750.5
+offset_top = 162.5
+offset_right = 3074.5
+offset_bottom = 602.5
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+icon_texture = ExtResource("12_beuva")
+text = "大豆"
+card_id = 8
+
+[node name="Btn_Confirm" parent="." unique_id=721568396 instance=ExtResource("10_4wsov")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -372.0
+offset_top = -259.0
+offset_right = 372.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Btn_BackToHome" parent="." unique_id=1317909387 instance=ExtResource("11_qvnao")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.0
+offset_top = -210.0
+offset_right = -200.0
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="UIAnimator" type="Node" parent="." unique_id=1418103512 node_paths=PackedStringArray("targets")]
+script = ExtResource("16_pmra4")
+targets = [NodePath("../BarLevelInfo/Icon1"), NodePath("../BarLevelInfo/Icon2"), NodePath("../GiftPanel/选项框"), NodePath("../GiftPanel/Label"), NodePath("../GiftPanel/ItemCardSelection1"), NodePath("../GiftPanel/ItemCardSelection2"), NodePath("../GiftPanel/ItemCardSelection3"), NodePath("../GiftPanel/ItemCardSelection4"), NodePath("../GiftPanel/ItemCardSelection5"), NodePath("../GiftPanel/ItemCardSelection6"), NodePath("../GiftPanel/ItemCardSelection7"), NodePath("../GiftPanel/ItemCardSelection8"), NodePath("../Btn_Confirm"), NodePath("../Btn_BackToHome"), null]
+start_offsets = Array[Vector2]([Vector2(-300, 0), Vector2(-250, 0), Vector2(0, -100), Vector2(0, -100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(0, 100), Vector2(-100, 0), Vector2(0, 100), Vector2(100, 0)])
+start_scales = Array[Vector2]([Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0.8, 0.8), Vector2(0.8, 0.8)])
+stagger = 0.2
+metadata/_custom_type_script = "uid://b0mk24k47umbk"
+
+[connection signal="pressed" from="Btn_Confirm" to="." method="_on_btn_confirm_pressed"]
+
+[editable path="BarLevelInfo"]

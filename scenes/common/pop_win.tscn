@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://d27831p4iul8j"]
+
+[ext_resource type="Texture2D" uid="uid://cu3r5t3j7b8a4" path="res://assets/ui/common/恭喜通关.png" id="1_tkgpt"]
+[ext_resource type="Script" uid="uid://cvkcxumnubjk8" path="res://scenes/common/pop_win.gd" id="1_wkl2f"]
+[ext_resource type="PackedScene" uid="uid://clvquditrjkyd" path="res://scenes/common/btn_confirm.tscn" id="3_n8dyv"]
+[ext_resource type="SpriteFrames" uid="uid://cb66gwlot8t0v" path="res://assets/sprite/恭喜通关/win_sprite_frames.tres" id="4_n8dyv"]
+
+[node name="PopWin" type="Control" unique_id=210206042]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wkl2f")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=678559057]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7294118)
+
+[node name="恭喜通关" type="TextureRect" parent="." unique_id=1016837805]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -965.5
+offset_top = -670.33496
+offset_right = 965.5
+offset_bottom = 452.66504
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.82, 0.82)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_tkgpt")
+
+[node name="Btn_Confirm" parent="." unique_id=1097266416 instance=ExtResource("3_n8dyv")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -372.0
+offset_top = 313.0
+offset_right = 372.0
+offset_bottom = 510.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 110
+icon_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1924686542]
+position = Vector2(1927, 876)
+sprite_frames = ExtResource("4_n8dyv")
+
+[connection signal="pressed" from="Btn_Confirm" to="." method="_on_button_pressed"]

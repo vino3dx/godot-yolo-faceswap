@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://184pnic8q7xf"]
+
+[ext_resource type="Texture2D" uid="uid://d3fa1jkqahpdq" path="res://assets/ui/common/home.png" id="1_n23ho"]
+[ext_resource type="Script" uid="uid://cm6cnjywtuwja" path="res://scenes/levels/game_start.gd" id="1_tostr"]
+[ext_resource type="Texture2D" uid="uid://c6jipcx87oavy" path="res://assets/ui/common/牌子.png" id="2_tostr"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="3_kx5f0"]
+[ext_resource type="VideoStream" uid="uid://dtde0njgv5qwq" path="res://assets/video/待机循环.mp4" id="3_yhu8n"]
+[ext_resource type="Texture2D" uid="uid://b51wurw7lxaej" path="res://assets/ui/common/3文字框.png" id="4_yhu8n"]
+[ext_resource type="Texture2D" uid="uid://g15uraaqa5eq" path="res://assets/ui/common/2副标题.png" id="5_is31s"]
+[ext_resource type="Texture2D" uid="uid://dpl7ylqgwnw4h" path="res://assets/ui/common/1主标题.png" id="6_v3kdm"]
+[ext_resource type="FontFile" uid="uid://d3je610jf8uwd" path="res://assets/fonts/SOURCEHANSERIF-HEAVY.TTC" id="7_p7aag"]
+[ext_resource type="Texture2D" uid="uid://c60sufu565ad" path="res://assets/ui/common/按键.png" id="8_thbk4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijws7"]
+
+[node name="GameStart" type="Control" unique_id=437179788]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tostr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1044614010]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_n23ho")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=940577538]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stream = ExtResource("3_yhu8n")
+autoplay = true
+expand = true
+loop = true
+
+[node name="牌子" type="Button" parent="." unique_id=1825500216]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 1552.0
+offset_right = 572.0
+offset_bottom = 2160.0
+pivot_offset_ratio = Vector2(0.5, 1)
+icon = ExtResource("2_tostr")
+flat = true
+script = ExtResource("3_kx5f0")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="3文字框" type="TextureRect" parent="." unique_id=803623384]
+layout_mode = 0
+offset_left = 1984.0
+offset_top = 315.0
+offset_right = 3708.0
+offset_bottom = 1552.0
+texture = ExtResource("4_yhu8n")
+
+[node name="2副标题" type="TextureRect" parent="." unique_id=1266052850]
+layout_mode = 0
+offset_left = 2471.0
+offset_top = 657.0
+offset_right = 3236.0
+offset_bottom = 1343.0
+texture = ExtResource("5_is31s")
+
+[node name="1主标题" type="TextureRect" parent="." unique_id=356671801]
+layout_mode = 0
+offset_left = 2410.0
+offset_top = 517.0
+offset_right = 3309.0
+offset_bottom = 609.0
+texture = ExtResource("6_v3kdm")
+
+[node name="Btn_Enter" type="Button" parent="." unique_id=323468020]
+layout_mode = 0
+offset_left = 2412.0
+offset_top = 1622.0
+offset_right = 3373.0
+offset_bottom = 1928.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 0.89411765, 0.40392157, 1)
+theme_override_fonts/font = ExtResource("7_p7aag")
+theme_override_font_sizes/font_size = 120
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ijws7")
+text = "我愿意"
+icon = ExtResource("8_thbk4")
+flat = true
+icon_alignment = 1
+script = ExtResource("3_kx5f0")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[connection signal="start_game" from="." to="." method="_on_start_game"]
+[connection signal="pressed" from="Btn_Enter" to="." method="_on_btn_enter_pressed"]

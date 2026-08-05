@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ynfltpkxu2vw"]
+
+[ext_resource type="Script" uid="uid://bpqcqrlohsdr5" path="res://scenes/face_swapping/level_1.gd" id="1_5qhde"]
+[ext_resource type="Texture2D" uid="uid://dfxnjgnm0ioru" path="res://assets/ui/face_swapping/lv0_背景.png" id="2_lvb8y"]
+[ext_resource type="Texture2D" uid="uid://dyttlhs5nehqq" path="res://assets/ui/face_swapping/lv0_焦点区域.png" id="3_lrjm6"]
+[ext_resource type="Texture2D" uid="uid://c6gpp8wwf0gsn" path="res://assets/ui/face_swapping/lv0_标题.png" id="4_3a5kf"]
+[ext_resource type="Texture2D" uid="uid://cpmwkfj18h86w" path="res://assets/ui/face_swapping/lv0_点击开始.png" id="5_j56ap"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="6_0fs3s"]
+
+[node name="Level1" type="Control" unique_id=1062582495]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5qhde")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=573359238]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lvb8y")
+expand_mode = 1
+
+[node name="Lv0焦点区域" type="TextureRect" parent="." unique_id=2061501489]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1475.5
+offset_top = -950.5
+offset_right = 1513.5
+offset_bottom = 1002.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_lrjm6")
+
+[node name="Lv0标题" type="TextureRect" parent="." unique_id=2098117640]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 99.0
+offset_top = -514.0
+offset_right = 349.0
+offset_bottom = 559.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3a5kf")
+
+[node name="BtnStart" type="Button" parent="." unique_id=1973873517]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 440.0
+offset_top = -340.0
+offset_right = 791.0
+offset_bottom = 349.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0, 0.5)
+icon = ExtResource("5_j56ap")
+flat = true
+script = ExtResource("6_0fs3s")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[connection signal="pressed" from="BtnStart" to="." method="_on_btn_next_pressed"]

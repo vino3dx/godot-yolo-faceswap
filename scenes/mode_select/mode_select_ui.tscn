@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cq0nlxpb383l5"]
+
+[ext_resource type="Texture2D" uid="uid://dgd3dg2e2q1pb" path="res://assets/ui/mode_select_ui/背景.png" id="1_1yuw6"]
+[ext_resource type="Script" uid="uid://dxiqegbpwfctm" path="res://scenes/mode_select/mode_select_ui.gd" id="1_wb2bo"]
+[ext_resource type="Texture2D" uid="uid://ciglrtayfrsv0" path="res://assets/ui/mode_select_ui/体验换脸.png" id="2_lf4s3"]
+[ext_resource type="Script" uid="uid://dhqtackedkm8u" path="res://scenes/common/btn_anima_button.gd" id="3_ofu4v"]
+[ext_resource type="Texture2D" uid="uid://vi5f32bnx6rp" path="res://assets/ui/mode_select_ui/体验游戏.png" id="4_ofu4v"]
+
+[node name="ModeSelectUi" type="Control" unique_id=7930501]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wb2bo")
+metadata/_edit_horizontal_guides_ = [660.0]
+metadata/_edit_vertical_guides_ = [2671.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=951519500]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1yuw6")
+expand_mode = 1
+
+[node name="AnimationButton" type="Button" parent="." unique_id=483027478]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 496.0
+offset_top = -420.0
+offset_right = 1160.0
+offset_bottom = 429.0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("2_lf4s3")
+flat = true
+script = ExtResource("3_ofu4v")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[node name="AnimationButton2" type="Button" parent="." unique_id=735397109]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1161.0
+offset_top = -420.0
+offset_right = -497.0
+offset_bottom = 429.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("4_ofu4v")
+flat = true
+script = ExtResource("3_ofu4v")
+metadata/_custom_type_script = "uid://dhqtackedkm8u"
+
+[connection signal="pressed" from="AnimationButton" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="AnimationButton2" to="." method="_on_right_pressed"]

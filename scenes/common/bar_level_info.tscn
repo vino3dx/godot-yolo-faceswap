@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://b27erp15evhd2"]
+
+[ext_resource type="Texture2D" uid="uid://xq8fdfrpgf5m" path="res://assets/ui/common/游戏关卡牌上.png" id="1_iwubq"]
+[ext_resource type="FontFile" uid="uid://d3je610jf8uwd" path="res://assets/fonts/SOURCEHANSERIF-HEAVY.TTC" id="2_ibaoh"]
+[ext_resource type="Texture2D" uid="uid://sd1d8we6vdld" path="res://assets/ui/common/游戏关卡牌下.png" id="3_sigyj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mm8aj"]
+font = ExtResource("2_ibaoh")
+font_size = 90
+
+[sub_resource type="LabelSettings" id="LabelSettings_dnkej"]
+font = ExtResource("2_ibaoh")
+font_size = 34
+
+[node name="BarLevelInfo" type="Control" unique_id=1210337805]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Icon1" type="TextureRect" parent="." unique_id=1283650277]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 51.0
+offset_right = 683.0
+offset_bottom = 193.0
+texture = ExtResource("1_iwubq")
+
+[node name="Label" type="Label" parent="Icon1" unique_id=1833311624]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -227.0
+offset_top = 3.0
+offset_right = 215.0
+offset_bottom = 138.0
+grow_horizontal = 2
+text = "托媒提亲"
+label_settings = SubResource("LabelSettings_mm8aj")
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="Icon2" type="TextureRect" parent="." unique_id=1839861947]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 199.0
+offset_right = 708.0
+offset_bottom = 314.0
+texture = ExtResource("3_sigyj")
+
+[node name="Label2" type="Label" parent="Icon2" unique_id=1771531278]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -285.0
+offset_top = -92.0
+offset_right = 275.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 44
+text = "帮助媒人挑选正确的提亲礼物"
+label_settings = SubResource("LabelSettings_dnkej")
+horizontal_alignment = 3

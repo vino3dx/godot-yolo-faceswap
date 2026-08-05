@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dkj2rjfpaay7a"]
+
+[ext_resource type="Script" uid="uid://bjtwsy1mvw0ti" path="res://scenes/common/item_good_card.gd" id="1_63w1y"]
+[ext_resource type="Texture2D" uid="uid://dlxn25qixnjph" path="res://assets/ui/level7/chk_good_true.png" id="2_6unwf"]
+[ext_resource type="Texture2D" uid="uid://5dkk8s3mpl1x" path="res://assets/ui/level7/chk_good_false.png" id="2_d7h73"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d7h73"]
+font_size = 68
+font_color = Color(0.3236103, 0.14979428, 0.06120132, 1)
+
+[node name="ItemGoodCard" type="Control" unique_id=1175344232]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 422.0
+offset_bottom = 555.0
+script = ExtResource("1_63w1y")
+metadata/_edit_vertical_guides_ = [274.0, 422.0]
+metadata/_edit_horizontal_guides_ = [555.0]
+
+[node name="Checkbox" type="CheckBox" parent="." unique_id=326520023]
+layout_mode = 0
+offset_top = 422.0
+offset_right = 430.0
+offset_bottom = 563.0
+theme_override_font_sizes/font_size = 66
+theme_override_icons/checked = ExtResource("2_6unwf")
+theme_override_icons/unchecked = ExtResource("2_d7h73")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=558783820]
+layout_mode = 0
+offset_right = 422.0
+offset_bottom = 422.0
+expand_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=1125119630]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 449.0
+offset_right = 295.0
+offset_bottom = 547.0
+label_settings = SubResource("LabelSettings_d7h73")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="toggled" from="Checkbox" to="." method="_on_check_toggled"]
