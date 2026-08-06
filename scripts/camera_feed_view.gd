@@ -82,7 +82,8 @@ func capture_frame() -> Image:
 		
 	return img
 
-## 捕获当前帧画面（指定的图片 texture）💥💥💥💥 临时使用图片代替拍摄
+
+## 捕获当前帧画面（指定的图片 texture）💥💥 临时使用图片代替拍摄测试💥💥
 #func capture_frame() -> Image:
 	#var test_texture: Texture2D = preload("res://Images/生成双人正面照.png") 
 	#
