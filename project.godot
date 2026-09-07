@@ -10,13 +10,12 @@ config_version=5
 
 [application]
 
-config/name="HunJiaXiSu"
+config/name="yolo-faceswap"
 config/description="大巴山婚嫁习俗的程序"
-config/tags=PackedStringArray("大巴山")
 run/main_scene="uid://b6pva7rnmwoqo"
-config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
+config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 boot_splash/show_image=false
-config/icon="uid://s3iwlrhswiqp"
+config/icon="uid://bleiw6hcyjqsm"
 
 [audio]
 
@@ -35,6 +34,8 @@ LicenseManager="*uid://dy4jnbqs1mu1q"
 window/size/viewport_width=3840
 window/size/viewport_height=2160
 window/size/borderless=true
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
 
 [dotnet]
