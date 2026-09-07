@@ -2,7 +2,7 @@
 
 [English](#english) | [中文说明](#chinese)
 
-![YOLO FaceSwap Preview](Images/preview.jpg)
+![YOLO FaceSwap Preview](preview.jpg)
 ---
 <a name="english"></a>
 ## 🚀 Overview
